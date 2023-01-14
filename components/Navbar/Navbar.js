@@ -45,7 +45,7 @@ export default function Navbar (){
     
 
     return(
-        <nav className="w-full py-4 bg-navbar-blue md:flex md:items-center md:justify-between sticky top-0">
+        <nav className="w-full py-4 bg-navbar-blue md:flex md:items-center md:justify-between sticky top-0 z-10">
 
             <div className='flex items-center h-full px-8'>
                 <img className='inline w-[3rem] mr-2 hoverIconAnimation cursor-pointer z-10'
