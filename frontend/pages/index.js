@@ -5,6 +5,7 @@ import HomeSection from '../components/HomeSection/HomeSection';
 import Link from '../components/Links/Link';
 import SkillsIndex from '../components/SkillsSection/SkillsIndex';
 import ProjectsIndex from '../components/Projects/ProjectsIndex';
+import ContactIndex from '../components/Contact/ContactIndex';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Intro></Intro>
       <SkillsIndex></SkillsIndex>
       <ProjectsIndex></ProjectsIndex>
+      <ContactIndex></ContactIndex>
     </div>
   )
 }
