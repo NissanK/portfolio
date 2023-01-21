@@ -17,7 +17,9 @@ module.exports = {
         'dark-slate' : '#83b3c9',
         'navbar-dark-green' : '#233f4f',
         'global-bg' : '#0a3c5e',
-        'highlight' : '#7cfcdf'
+        'highlight' : '#7cfcdf',
+        'error' : '#ff3333',
+        'bright-blue' : '#0096FF'
       },
       fontFamily: {
         sans: ['var(--font-ubuntu)'],
