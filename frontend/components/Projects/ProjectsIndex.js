@@ -1,6 +1,5 @@
 import React from "react";
 import SectionHeading from "../Universal/SectionHeading";
-
 import Project from "./Project";
 
 const projects = [
@@ -30,14 +29,20 @@ for (let i = 0; i < projects.length; i++) {
   projectsDOM.push(<Project project={projects[i]} key={i}></Project>);
 }
 
+// The weird margins and padding in the section tag is for the anchor tag from Navbar
+// in such a way, such that the navbar doesnt cover the section headings.
+
+// To avoid this error a -mt-20 and pt-20 has been applied and hence the calculations
+// have been done in such a way so that the previous margins effects are also applicable
+
 function ProjectsIndex() {
   return (
-    <div className="my-10 md:my-16">
-      <SectionHeading heading="Projects"></SectionHeading>
+    <section id="projects" className="my-10 md:my-16 scroll-mt-[80px]">
+      <SectionHeading heading="Projects" nav="projects"></SectionHeading>
       <div className="flex items-center my-6 md:my-10 flex-col space-y-12 ">
         {projectsDOM}
       </div>
-    </div>
+    </section>
   );
 }
 

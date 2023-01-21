@@ -5,7 +5,7 @@ import SectionHeading from "../Universal/SectionHeading";
 
 function Intro() {
   return (
-    <div className="my-10 md:my-16">
+    <section className="my-10 md:my-16 scroll-mt-[80px]" id="about">
       <SectionHeading heading="About Me"></SectionHeading>
 
       <div className="flex flex-col md:flex-row justify-center items-center my-6 md:my-10">
@@ -80,7 +80,7 @@ function Intro() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

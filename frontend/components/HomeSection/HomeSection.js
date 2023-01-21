@@ -2,7 +2,7 @@ import React from "react";
 
 function Home() {
   return (
-    <div className="flex mx-auto my-10 md:my-20 w-4/5 flex-col">
+    <section className="flex mx-auto my-10 md:my-20 w-4/5 flex-col">
       <h1 className="text-[#c3d9e3] my-3 text-sm md:text-md">Hi I am,</h1>
       <h1 className=" text-5xl md:text-8xl my-3 text-lightest-slate">
         Nissan Kumar
@@ -18,7 +18,7 @@ function Home() {
       >
         View My Projects
       </button>
-    </div>
+    </section>
   );
 }
 

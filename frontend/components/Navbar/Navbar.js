@@ -1,8 +1,12 @@
+import Link from "next/link";
 import React, { useEffect, useState, useRef } from "react";
 import { MenuSharp } from "react-ionicons";
 import { CloseSharp } from "react-ionicons";
+import NavbarLinkGMedium from "./NavbarLinkGMedium";
+import NavbarLinkBMedium from "./NavbarLinkBMedium";
 
 export default function Navbar() {
+
   const [iconHover, setIconHover] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const iconHoverRef = useRef(null);
@@ -51,10 +55,10 @@ export default function Navbar() {
   }, [menuOpen]);
 
   return (
-    <nav className="w-full py-4 bg-navbar-blue md:flex md:items-center md:justify-between sticky top-0 z-10">
+    <nav className="w-full py-4 bg-navbar-blue md:flex md:items-center md:justify-between sticky z-10 top-0">
       <div className="flex items-center h-full px-8">
         <img
-          className="inline w-[3rem] mr-2 hoverIconAnimation cursor-pointer z-10"
+          className="inline w-[3rem] mr-2 hoverIconAnimation z-10"
           src="/favicon/apple-touch-icon.png"
           alt="Nissan Kumar"
           onMouseEnter={() => setIconHover(true)}
@@ -62,12 +66,14 @@ export default function Navbar() {
         ></img>
         <div
           ref={iconHoverRef}
-          className="bold text-lg text-lightest-slate hover-underline-animation
-            	cursor-pointer z-10"
+          className="bold text-lg text-lightest-slate hover-underline-animation z-10"
         >
           {" "}
           Nissan Kumar
         </div>
+
+        {/* burger menu for below medium screen  */}
+
         <span
           ref={menuOpenRef}
           onClick={() => setMenuOpen(true)}
@@ -94,50 +100,28 @@ export default function Navbar() {
         </span>
       </div>
 
+      {/* for medium above screen devices  */}
       <ul
         className="md:flex items-center h-full px-8 md:space-x-8 lg:space-x-12
-            bg-navbar-blue hidden z-0 pt-0"
-      >
-        <li>
-          <a
-            href="#"
-            className="cursor-pointer bold text-lg hover-underline-animation text-lightest-slate"
-          >
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className="cursor-pointer bold text-lg hover-underline-animation text-lightest-slate"
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className="cursor-pointer bold text-lg hover-underline-animation text-lightest-slate"
-          >
-            Projects
-          </a>
-        </li>
-        <li>
-          <a
-            className="cursor-pointer bold text-lg hover-underline-animation text-lightest-slate"
-          >
-            Contact
-          </a>
-        </li>
+        bg-navbar-blue hidden z-0 pt-0"
+        >
+        
+        <NavbarLinkGMedium nameID="#home" name='Home'></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#about" name='About'></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#skills" name='Skills'></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#projects" name='Projects'></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#contact" name='Contact'></NavbarLinkGMedium>
+        
         <button
           className=" text-global-bg bg-lightest-slate 
-                px-6 rounded border-2 py-1 bold text-md transition-all
-                border-navbar-dark-green  hover:bg-light-slate"
-        >
+          px-5 rounded border-2 py-[0.2rem] bold text-md transition-all
+          border-navbar-dark-green  hover:bg-light-slate"
+          >
           Resume
         </button>
       </ul>
 
+      {/* for below medium screen devices  */}
       <div
         ref={menuRef}
         className="w-[350px] h-[350px] bg-navbar-blue absolute
@@ -145,39 +129,13 @@ export default function Navbar() {
              transition-all ease-in duration-500"
       >
         <ul className=" pt-[4.5rem]">
-          <li className="my-2 ml-[50%] flex justify-center mr-[22%]">
-            <a
-              href="#"
-              className="cursor-pointer bold text-lg hover-underline-animation text-lightest-slate"
-            >
-              Home
-            </a>
-          </li>
-          <li className="my-2 ml-[50%] flex justify-center mr-[22%]">
-            <a
-              href="#"
-              className="cursor-pointer bold text-lg hover-underline-animation text-lightest-slate"
-            >
-              About
-            </a>
-          </li>
-          <li className="my-2 ml-[50%] flex justify-center mr-[22%]">
-            <a
-              href="#"
-              className="cursor-pointer bold text-lg hover-underline-animation text-lightest-slate"
-            >
-              Projects
-            </a>
-          </li>
-          <li className="my-2 ml-[50%] flex justify-center mr-[22%]">
-            <a
-              href="#"
-              className="cursor-pointer bold text-lg hover-underline-animation text-lightest-slate"
-            >
-              Contact
-            </a>
-          </li>
 
+          <NavbarLinkBMedium nameID="#home" name="Home"></NavbarLinkBMedium>
+          <NavbarLinkBMedium nameID="#about" name="About"></NavbarLinkBMedium>
+          <NavbarLinkBMedium nameID="#skills" name="Skills"></NavbarLinkBMedium>
+          <NavbarLinkBMedium nameID="#projects" name="Projects"></NavbarLinkBMedium>
+          <NavbarLinkBMedium nameID="#contact" name="Contact"></NavbarLinkBMedium>
+          
           <button
             className="bold text-md text-global-bg bg-lightest-slate 
                     px-6 rounded border-2 border-navbar-dark-green 
@@ -186,6 +144,7 @@ export default function Navbar() {
           >
             Resume
           </button>
+
         </ul>
       </div>
     </nav>

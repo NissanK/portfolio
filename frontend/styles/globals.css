@@ -9,6 +9,20 @@
     /* font-family: "Source Sans Pro", sans-serif; */
 }
 
+/* scrollbar styles  */
+
+html::-webkit-scrollbar{
+    width : 1.5vh;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: #83b3c9;
+    border-radius: 2px;
+}
+html::-webkit-scrollbar-track{
+    background-color: #0a3c5e;
+}
+
 /* global background color - #0a3c5e  */
 
 .hover-underline-animation {
@@ -33,7 +47,31 @@
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
 .hover-underline-animation-hovered:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.hover-underline-animation-highlight {
+    display: inline-block;
+    position: relative;
+}
+  
+.hover-underline-animation-highlight::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #7cfcdf;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-underline-animation-highlight:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }

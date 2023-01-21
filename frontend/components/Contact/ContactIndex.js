@@ -3,7 +3,7 @@ import SectionHeading from "../Universal/SectionHeading";
 
 function ContactIndex() {
   return (
-    <div className="my-10 md:my-16">
+    <section id="contact" className="my-10 md:my-16 scroll-mt-[80px]">
       <SectionHeading heading="Contact"></SectionHeading>
 
       <div className=" text-center mx-[10%] text-lg md:text-xl text-lightest-slate my-5">
@@ -20,7 +20,7 @@ function ContactIndex() {
             <input
               type="text"
               placeholder="David"
-              className="block bg-white rounded p-2 w-full my-1 text-bright-blue
+              className="block bg-white rounded p-2 w-full my-1 text-blue-slate
             focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg
             text-sm placeholder-lightest-slate"
             ></input>
@@ -33,7 +33,7 @@ function ContactIndex() {
             <input
               type="email"
               placeholder="david@example.com"
-              className="block bg-white rounded p-2 w-full my-1 text-bright-blue
+              className="block bg-white rounded p-2 w-full my-1 text-blue-slate
             focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg peer
             invalid:border-error invalid:text-error focus:invalid:border-error focus:invalid:ring-error
             text-sm placeholder-lightest-slate"
@@ -49,14 +49,14 @@ function ContactIndex() {
             </span>
             <textarea
               placeholder="Type your message here"
-              className="block bg-white rounded p-2  my-1 text-bright-blue w-full !h-[100px] md:!h-[150px]
+              className="block bg-white rounded p-2  my-1 text-blue-slate w-full !h-[100px] md:!h-[150px]
             focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg resize-none
             text-sm placeholder-lightest-slate"
             ></textarea>
           </label>
 
           <button
-            className="bold text-sm md:text-md text-navbar-dark-green bg-[#c8e6fa] w-[9rem] md:w-[12rem] my-6
+            className="bold text-sm md:text-md text-navbar-dark-green bg-[#c8e6fa] w-[9rem] md:w-[12rem] mt-6
             px-4 rounded border-[0.5px] ring-[0.5px] ring-navbar-dark-green border-navbar-dark-green py-1 flex justify-center
             transition-all hover:bg-highlight mx-auto"
           >
@@ -64,7 +64,7 @@ function ContactIndex() {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 }
 
