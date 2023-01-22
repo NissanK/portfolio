@@ -36,15 +36,18 @@ function IntroImage() {
          flex items-center justify-center rounded-lg transition-all duration-500"
       >
         <div
-          className="w-[17.75rem] h-[17.5rem] bg-global-bg flex
+          className="w-[17.75rem] h-[17.5rem] bg-global-bg flex relative
            items-center justify-center rounded-lg transition-all duration-500"
         >
           <img
-            src="/images/sample-picture.png"
+            src="/images/sample-picture.jpg"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             className="rounded-lg w-[16.5rem] h-[16.5rem]"
           ></img>
+          <div className="absolute bg-highlight w-[16.5rem] h-[16.5rem] rounded-lg opacity-20"
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}></div>
         </div>
       </div>
     </div>

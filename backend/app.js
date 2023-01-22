@@ -3,6 +3,11 @@ const dotenv = require('dotenv');
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
+const cors = require('cors');
+
+app.use(cors({
+    origin : "http://localhost:3001"
+}))
 
 dotenv.config({path: './config.env'});
 require('./db/connection')

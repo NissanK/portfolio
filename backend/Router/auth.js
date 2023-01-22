@@ -6,10 +6,10 @@ require('../db/connection');
 const Form = require('../schemas/formSchema')
 
 router.get('/',(req,res)=>{
-    res.send('Hello world from the server router yeet');
+    res.send('Hello world from the server router');
 })
 
-router.post('/',(req,res)=>{
+router.post('/submit',(req,res)=>{
     const {name,email,message} = req.body;
     if(!name || !email || !message){
         return res.status(422).json({error : "Please fill all the fields"});
