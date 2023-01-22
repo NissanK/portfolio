@@ -5,9 +5,7 @@ const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
 
-app.use(cors({
-    origin : "http://localhost:3001"
-}))
+app.use(cors());
 
 dotenv.config({path: './config.env'});
 require('./db/connection')
@@ -18,7 +16,7 @@ app.use(express.json());
 
 app.use(require('./Router/auth'))
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 // middleware
 const middleware = (req,res,next) => {
@@ -30,6 +28,6 @@ app.get('/',middleware,(req,res)=>{
     res.send('Hello world from the server');
 })
 
-app.listen(3000, ()=>{
+app.listen(PORT, ()=>{
     console.log(`server is running at port ${PORT}`);
 })
