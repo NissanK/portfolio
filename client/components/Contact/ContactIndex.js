@@ -21,7 +21,7 @@ function ContactIndex() {
   const postData = async (e) => {
     e.preventDefault();
     const {name,email,message} = userForm;
-    const res = await fetch("http://localhost:3000/submit",{
+    const res = await fetch("https://nissanportfolio2.onrender.com/submit",{
       method : "POST",
       headers : {
         "Content-Type" : "application/json"
