@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { SkillContext } from "./SkillsIndex";
+import React from "react";
 
 function SkillTag(props) {
   return (

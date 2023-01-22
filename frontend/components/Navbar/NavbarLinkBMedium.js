@@ -3,7 +3,6 @@ import { useRef ,useEffect} from "react";
 
 // BMedium in name stands for above medium screens 
 
-
 function NavbarLinkBMedium(props) {
     const linkRef = useRef(null);
 

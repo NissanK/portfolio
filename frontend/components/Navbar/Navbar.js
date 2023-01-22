@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React, { useEffect, useState, useRef } from "react";
 import { MenuSharp } from "react-ionicons";
 import { CloseSharp } from "react-ionicons";

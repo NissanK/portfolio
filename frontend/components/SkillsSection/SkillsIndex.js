@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useInsertionEffect } from "react";
+import React from "react";
 import SectionHeading from "../Universal/SectionHeading";
 import SkillTag from "./SkillTag";
 

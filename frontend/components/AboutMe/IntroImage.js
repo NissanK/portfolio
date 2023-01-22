@@ -41,9 +41,9 @@ function IntroImage() {
         >
           <img
             src="/images/sample-picture.jpg"
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            className="rounded-lg w-[16.5rem] h-[16.5rem]"
+            // onMouseEnter={() => setHovered(true)}
+            // onMouseLeave={() => setHovered(false)}
+            className="rounded-lg w-[16.5rem] h-[16.5rem] contrast-125"
           ></img>
           <div className="absolute bg-highlight w-[16.5rem] h-[16.5rem] rounded-lg opacity-20"
           onMouseEnter={() => setHovered(true)}
