@@ -35,27 +35,27 @@ function Intro() {
               />
             </a>
             <a
-              href="https://github.com/NissanK"
+              href="https://www.instagram.com/nissan_kumar72/"
               target={"_blank"} rel="noreferrer"
               className="w-12 h-12 rounded hover:bg-navbar-blue
             cursor-pointer flex justify-center items-center transition-all"
             >
               <LogoInstagram
                 color={"#a6d7f8"}
-                title="logoGithub"
+                title="logoInstagram"
                 height="2rem"
                 width="2rem"
               />
             </a>
             <a
-              href="https://github.com/NissanK"
+              href="https://www.linkedin.com/in/nissan-kumar-554a7a224/"
               target={"_blank"} rel="noreferrer"
               className="w-12 h-12 rounded hover:bg-navbar-blue
             cursor-pointer flex justify-center items-center transition-all"
             >
               <LogoLinkedin
                 color={"#a6d7f8"}
-                title="logoGithub"
+                title="logoLinkedin"
                 height="2rem"
                 width="2rem"
               />
