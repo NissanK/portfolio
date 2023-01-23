@@ -17,7 +17,7 @@ function Intro() {
           <h1 className="text-light-slate text-lg md:text-xl my-3">I&apos;m Currently pursuing my <span className="text-highlight">B.Tech</span> in <span className="text-highlight">Mathematics and Computing</span> from <span className="text-highlight"> Delhi Technological University</span></h1>
 
           <h1 className="text-light-slate text-lg md:text-xl my-1">
-            I am majorly a <span className="text-highlight"> Frontend Web Developer/ Competitive Programmer</span>, trying to explore different domains and enjoy college life. Feel free to connect with me using my social links.
+            I am primarily a <span className="text-highlight"> Frontend Web Developer/ Competitive Programmer</span>, trying to explore different domains and enjoy college life. Feel free to connect with me using my social links.
           </h1>
 
           <div className="flex justify-center md:justify-start items-center space-x-4 mt-3 md:my-3">

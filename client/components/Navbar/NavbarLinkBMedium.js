@@ -9,7 +9,6 @@ function NavbarLinkBMedium(props) {
     useEffect(() => {
         function anchorSmoothScroll(e){
             e.preventDefault();
-            console.log(linkRef.current);
             document.querySelector(this.getAttribute("href")).scrollIntoView({
                 behavior : "smooth"
             });

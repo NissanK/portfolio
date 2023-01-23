@@ -40,7 +40,7 @@ function IntroImage() {
            items-center justify-center rounded-lg transition-all duration-500"
         >
           <img
-            src="/images/sample-picture.jpg"
+            src="/images/sample-picture.png"
             className="rounded-lg w-[16.5rem] h-[16.5rem] contrast-125"
             alt="Nissan Kumar"
           ></img>

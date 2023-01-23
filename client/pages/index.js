@@ -11,7 +11,17 @@ import Footer from '../components/Footer/Footer';
 export default function Home() {
 
   return (
-    <div className='bg-[#0a3c5e]' id='home'>
+    <div className='bg-gradient-to-r from-[#0e5b8f] to-global-bg' id='home'>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
       <Navbar></Navbar>
       <Link></Link>
       <HomeSection></HomeSection>

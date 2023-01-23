@@ -39,10 +39,8 @@ function ContactIndex() {
       emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, formRef.current,process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
       .then((result) => {
         window.alert("Your Form has been sent!");
-        console.log(result.text);
       }, (error) => {
         window.alert("Your form wasn't sent!");
-        console.log(error.text);
       });
 
       setUserForm({...userForm, message : ""});

@@ -55,9 +55,10 @@ export default function Navbar() {
 
   return (
     <nav className="w-full py-4 bg-navbar-blue md:flex md:items-center md:justify-between sticky z-10 top-0">
-      <div className="flex items-center h-full px-8">
+      {menuOpen && <div onClick={()=> {setMenuOpen(false)}} className='bg-slate-400 h-screen w-screen absolute top-0 left-0 opacity-0'></div>}
+      <div className="flex items-center h-full px-4 sm:px-6 md:px-8">
         <img
-          className="inline w-[3rem] mr-2 hoverIconAnimation z-10"
+          className="inline w-[3rem] mr-2 sm:hoverIconAnimation z-10"
           src="/favicon/apple-touch-icon.png"
           alt="Nissan Kumar"
           onMouseEnter={() => setIconHover(true)}
@@ -65,7 +66,7 @@ export default function Navbar() {
         ></img>
         <div
           ref={iconHoverRef}
-          className="bold text-lg text-lightest-slate hover-underline-animation z-10"
+          className="bold text-lg text-lightest-slate sm:hover-underline-animation z-10 opacity-0 sm:opacity-100"
         >
           {" "}
           Nissan Kumar
@@ -79,7 +80,7 @@ export default function Navbar() {
           className="md:hidden block ml-auto cursor-pointer z-10"
         >
           <MenuSharp
-            color={"#FFFFFF"}
+            color={"#a6d7f8"}
             title="menu"
             height="2rem"
             width="2rem"
@@ -91,7 +92,7 @@ export default function Navbar() {
           className="md:hidden hidden ml-auto cursor-pointer z-10"
         >
           <CloseSharp
-            color={"#FFFFFF"}
+            color={"#a6d7f8"}
             title="menu"
             height="2rem"
             width="2rem"
