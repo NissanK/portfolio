@@ -10,7 +10,7 @@ function Link() {
     >
       <a
         href="https://www.linkedin.com/in/nissan-kumar-554a7a224/"
-        target={"_blank"}
+        target={"_blank"} rel="noreferrer"
         className="w-12 h-12 rounded bg-navbar-blue hover:bg-navbar-dark-green 
         cursor-pointer flex justify-center items-center transition-all"
       >
@@ -23,7 +23,7 @@ function Link() {
       </a>
       <a
         href="https://github.com/NissanK"
-        target={"_blank"}
+        target={"_blank"} rel="noreferrer"
         className="w-12 h-12 rounded bg-navbar-blue hover:bg-navbar-dark-green 
         cursor-pointer flex justify-center items-center transition-all"
       >
@@ -36,7 +36,7 @@ function Link() {
       </a>
       <a
         href="https://www.instagram.com/nissan_kumar72/"
-        target={"_blank"}
+        target={"_blank"} rel="noreferrer"
         className="w-12 h-12 rounded bg-navbar-blue hover:bg-navbar-dark-green 
         cursor-pointer flex justify-center items-center transition-all"
       >

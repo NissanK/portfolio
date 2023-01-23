@@ -32,6 +32,7 @@ function Project({ project }) {
       <div className="relative md:hidden">
         <img
           src={project.image}
+          alt={project.name}
           className=" border-[1px] border-light-slate rounded w-4/5 opacity-30 mx-auto"
         ></img>
         <div className="rounded absolute top-0 left-0 w-4/5 sm:p-5 p-2 mx-[10%]">
@@ -54,7 +55,7 @@ function Project({ project }) {
         <div className="flex mt-2 mx-[10%] justify-end">
           <a
             href={project.github}
-            target={"_blank"}
+            target={"_blank"} rel="noreferrer"
             className="sm:w-8 sm:h-8 h-4 w-4 rounded cursor-pointer
                 flex justify-center items-center transition-all mr-2"
           >
@@ -63,7 +64,7 @@ function Project({ project }) {
 
           <a
             href={project.link}
-            target={"_blank"}
+            target={"_blank"} rel="noreferrer"
             className="sm:w-8 sm:h-8 h-4 w-4 rounded cursor-pointer
                 flex justify-center items-center transition-all "
           >
@@ -76,6 +77,7 @@ function Project({ project }) {
 
       <img
         src={project.image}
+        alt={project.name}
         ref={pImageRef}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -106,7 +108,7 @@ function Project({ project }) {
         <div className="flex justify-end">
           <a
             href={project.github}
-            target={"_blank"}
+            target={"_blank"} rel="noreferrer"
             className="w-12 h-12 rounded cursor-pointer
                 flex justify-center items-center transition-all"
           >
@@ -115,7 +117,7 @@ function Project({ project }) {
 
           <a
             href={project.link}
-            target={"_blank"}
+            target={"_blank"} rel="noreferrer"
             className="md:w-12 md:h-12 rounded cursor-pointer
                 flex justify-center items-center transition-all "
           >

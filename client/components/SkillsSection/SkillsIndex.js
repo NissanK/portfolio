@@ -40,7 +40,7 @@ function skillsIndex() {
         Here is the link to my{" "}
         <a
           href="https://leetcode.com/abandonedthrasher/"
-          target={"_blank"}
+          target={"_blank"} rel="noreferrer"
           className="text-highlight cursor-pointer hover-underline-animation-highlight transition-all"
         >
           Leetcode

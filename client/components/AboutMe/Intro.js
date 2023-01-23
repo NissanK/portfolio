@@ -13,34 +13,23 @@ function Intro() {
 
         <div className="md:w-1/2 mx-10">
           <h1 className="text-light-slate text-2xl md:text-3xl my-1">
-            I am 19 years old and I'm a developer from{" "}
-            <span className="text-[#7cfcdf]">India</span>.{" "}
+            I am 19 years old and I'm a developer from <span className="text-[#7cfcdf]">India</span>.
           </h1>
 
           <h1 className="text-light-slate text-lg md:text-xl my-3">
             I'm Currently pursuing my
-            <span className="text-highlight"> B.Tech</span> in{" "}
-            <span className="text-highlight">Mathematics and Computing</span>{" "}
-            from
-            <span className="text-highlight">
-              {" "}
-              Delhi Technological University
+            <span className="text-highlight"> B.Tech</span> in <span className="text-highlight">Mathematics and Computing</span> from <span className="text-highlight"> Delhi Technological University
             </span>
           </h1>
 
           <h1 className="text-light-slate text-lg md:text-xl my-1">
-            I am majorly a{" "}
-            <span className="text-highlight">
-              Frontend Web Developer/ Competitive Programmer
-            </span>
-            , trying to explore different domains and enjoy college life. Feel
-            free to connect with me using my social links.
+            I am majorly a <span className="text-highlight"> Frontend Web Developer/ Competitive Programmer</span>, trying to explore different domains and enjoy college life. Feel free to connect with me using my social links.
           </h1>
 
           <div className="flex justify-center md:justify-start items-center space-x-4 mt-3 md:my-3">
             <a
               href="https://github.com/NissanK"
-              target={"_blank"}
+              target={"_blank"} rel="noreferrer"
               className="w-12 h-12 rounded hover:bg-navbar-blue
             cursor-pointer flex justify-center items-center transition-all"
             >
@@ -53,7 +42,7 @@ function Intro() {
             </a>
             <a
               href="https://github.com/NissanK"
-              target={"_blank"}
+              target={"_blank"} rel="noreferrer"
               className="w-12 h-12 rounded hover:bg-navbar-blue
             cursor-pointer flex justify-center items-center transition-all"
             >
@@ -66,7 +55,7 @@ function Intro() {
             </a>
             <a
               href="https://github.com/NissanK"
-              target={"_blank"}
+              target={"_blank"} rel="noreferrer"
               className="w-12 h-12 rounded hover:bg-navbar-blue
             cursor-pointer flex justify-center items-center transition-all"
             >
