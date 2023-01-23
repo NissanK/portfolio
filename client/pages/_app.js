@@ -1,5 +1,7 @@
 import '../styles/globals.css'
 import { Ubuntu} from '@next/font/google'
+import { Analytics } from '@vercel/analytics/react';
+
 
 const ubuntu = Ubuntu({
   subsets : ['latin'],
