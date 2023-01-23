@@ -12,7 +12,7 @@ function Intro() {
         <IntroImage></IntroImage>
 
         <div className="md:w-1/2 mx-10">
-          <h1 className="text-light-slate text-2xl md:text-3xl my-1">I&apos;m 19 years old and I&apos;m a developer from <span className="text-[#7cfcdf]">India</span>.</h1>
+          <h1 className="text-light-slate text-2xl md:text-3xl my-1">I&apos;m 19 years old and a developer from <span className="text-[#7cfcdf]">India</span>.</h1>
 
           <h1 className="text-light-slate text-lg md:text-xl my-3">I&apos;m Currently pursuing my <span className="text-highlight">B.Tech</span> in <span className="text-highlight">Mathematics and Computing</span> from <span className="text-highlight"> Delhi Technological University</span></h1>
 
