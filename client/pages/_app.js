@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }) {
   return(
     <main className={`${ubuntu.variable} font-sans`}>
       <Component {...pageProps} />
+      <Analytics></Analytics>
     </main>
   )
 }
