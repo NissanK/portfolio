@@ -10,13 +10,13 @@ const skills = [
   { name: "Node.js" },
   { name: "Express.js" },
   { name: "C++" },
-  { name: "Tailwind CSS" },
   { name: "JavaScript" },
+  { name: "Tailwind CSS" },
   { name: "Bootstrap 5" },
-  { name: "HTML" },
   { name: "CSS" },
+  { name: "HTML" },
   { name: "Github" },
-  { name: "MongoDB" },
+  { name: "MongoDB" }
 ];
 
 let skillElements = [];

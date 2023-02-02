@@ -55,8 +55,17 @@ export default function Navbar() {
 
   return (
     <nav className="w-full py-4 bg-navbar-blue md:flex md:items-center md:justify-between sticky z-10 top-0">
-      {menuOpen && <div onClick={()=> {setMenuOpen(false)}} className='bg-slate-400 h-screen w-screen absolute top-0 left-0 opacity-0'></div>}
+
+      {menuOpen &&
+       <div
+        onClick={()=> setMenuOpen(false)}
+        onTouchMove={()=> setMenuOpen(false)}
+        className='bg-slate-400 h-screen w-screen absolute top-0 left-0 opacity-0'>
+       </div>
+      }
+
       <div className="flex items-center h-full px-4 sm:px-6 md:px-8">
+
         <img
           className="inline w-[3rem] mr-2 sm:hoverIconAnimation z-10"
           src="/favicon/apple-touch-icon.png"
@@ -64,6 +73,7 @@ export default function Navbar() {
           onMouseEnter={() => setIconHover(true)}
           onMouseLeave={() => setIconHover(false)}
         ></img>
+
         <div
           ref={iconHoverRef}
           className="bold text-lg text-lightest-slate sm:hover-underline-animation z-10 opacity-0 sm:opacity-100"

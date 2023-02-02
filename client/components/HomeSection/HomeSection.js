@@ -30,6 +30,9 @@ function Home() {
       <span></span>
       <span></span>
       <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
 
       <h1 className="text-[#c3d9e3] my-3 text-md">Hi I am,</h1>
       <h1 className=" text-5xl md:text-8xl my-3 text-lightest-slate">

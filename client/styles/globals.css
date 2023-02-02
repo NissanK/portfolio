@@ -19,10 +19,11 @@ body{
 .wrapper span{
     position: fixed;
     top: -120px;
-    height: 5px;
+    height: 6px;
     z-index: 0;
-    width: 5px;
-    animation: animate 10s linear infinite;    
+    width: 6px;
+    animation: animate 10s linear infinite;
+    border-radius: 2px;
 }
 
 .wrapper span:nth-child(1){
@@ -32,53 +33,69 @@ body{
 }
 .wrapper span:nth-child(2){
     left: 60%;
-    animation-delay: 3s;
+    animation-delay: 2s;
     background: #1b7ce3;
 }
 .wrapper span:nth-child(3){
     left: 20%;
-    animation-delay: 2s;
+    animation-delay: 1s;
     background: #84bbf5;    
 }
 .wrapper span:nth-child(4){
     left: 30%;
-    animation-delay: 5s;
+    animation-delay: 4s;
     background: #4c8af5;
 }
 .wrapper span:nth-child(5){
     left: 40%;
-    animation-delay: 1s;
     background: #83cdf7;
 }
 .wrapper span:nth-child(6){
     left: 50%;
-    animation-delay: 7s;
+    animation-delay: 6s;
     background: deepskyblue;
 }
 .wrapper span:nth-child(7){
     left: 60%;
-    animation-delay: 6s;
+    animation-delay: 4.8s;
     background: #25aedb;
 }
 .wrapper span:nth-child(8){
     left: 70%;
-    animation-delay: 8s;
+    animation-delay: 7s;
     background:  #1877b8;
 }
 .wrapper span:nth-child(9){
     left: 80%;
-    animation-delay: 6s;
+    animation-delay: 5s;
     background: cyan;
 }
 .wrapper span:nth-child(10){
     left: 90%;
-    animation-delay: 4s;
+    animation-delay: 3s;
     background:#54a9e3;    
 }
 .wrapper span:nth-child(10){
     left: 15%;
-    animation-delay: 4s;
+    animation-delay: 3.2s;
     background: #54a9e3;    
+}
+
+.wrapper span:nth-child(11){
+    right: 5%;
+    animation-delay: 1s;
+    background: #49b8dd;    
+}
+
+.wrapper span:nth-child(12){
+    right: 8%;
+    animation-delay: 6s;
+    background: #1d9ec2;    
+}
+.wrapper span:nth-child(13){
+    right: 50%;
+    animation-delay: 3.5s;
+    background: #64b7da;    
 }
 
 @keyframes animate{
