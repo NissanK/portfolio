@@ -57,7 +57,7 @@ function ContactIndex() {
       </div>
 
       <div className="flex justify-center mt-9">
-        <form method="POST" className="w-4/5 sm:w-[70%] md:w-3/5 bg-light-slate rounded p-6 md:p-8 drop-shadow-xl"
+        <form method="POST" className="w-[70%] md:w-3/5 bg-light-slate rounded p-6 md:p-8 drop-shadow-xl"
         onSubmit={postData} ref={formRef}
         >
           <label className="block py-2">
