@@ -13,8 +13,8 @@ const skills = [
   { name: "JavaScript" },
   { name: "Tailwind CSS" },
   { name: "Bootstrap 5" },
-  { name: "CSS" },
-  { name: "HTML" },
+  { name: "CSS3" },
+  { name: "HTML5" },
   { name: "Github" },
   { name: "MongoDB" }
 ];

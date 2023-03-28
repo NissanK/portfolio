@@ -122,13 +122,15 @@ export default function Navbar() {
         <NavbarLinkGMedium nameID="#projects" name='Projects'></NavbarLinkGMedium>
         <NavbarLinkGMedium nameID="#contact" name='Contact'></NavbarLinkGMedium>
         
-        <button
+        <a
+          href="https://drive.google.com/drive/folders/1A8sCuddeEbW5695GYlLzUiraKhrw9_30?usp=sharing"
+          target={"_blank"} rel="noreferrer"
           className=" text-global-bg bg-lightest-slate 
           px-5 rounded border-2 py-[0.2rem] bold text-md transition-all
           border-navbar-dark-green  hover:bg-light-slate"
           >
           Resume
-        </button>
+        </a>
       </ul>
 
       {/* for below medium screen devices  */}
