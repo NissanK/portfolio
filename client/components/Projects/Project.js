@@ -1,10 +1,17 @@
 import React, { useEffect, useState, useRef } from "react";
 import { FiGithub } from "react-icons/fi";
 import { GoLinkExternal } from "react-icons/go";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
-function Project({ project }) {
+function Project({ project , aosAnim }) {
   const [hover, setHover] = useState(false);
   const pImageRef = useRef(null);
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   useEffect(() => {
     if (hover) {
       pImageRef.current.classList.remove("opacity-50");
@@ -26,7 +33,8 @@ function Project({ project }) {
   }
 
   return (
-    <div className="flex rounded justify-center items-center md:flex-row flex-col">
+    <div className="flex rounded justify-center items-center md:flex-row flex-col"
+    data-aos={aosAnim} data-aos-once='true' data-aos-duration='500'>
       {/* on less than medium screens this div will be visible  */}
 
       <div className="relative md:hidden">

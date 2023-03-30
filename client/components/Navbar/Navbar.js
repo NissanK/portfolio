@@ -3,6 +3,8 @@ import { MenuSharp } from "react-ionicons";
 import { CloseSharp } from "react-ionicons";
 import NavbarLinkGMedium from "./NavbarLinkGMedium";
 import NavbarLinkBMedium from "./NavbarLinkBMedium";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 export default function Navbar() {
 
@@ -12,6 +14,10 @@ export default function Navbar() {
   const menuOpenRef = useRef(null);
   const menuCloseRef = useRef(null);
   const menuRef = useRef(null);
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
 
   useEffect(() => {
     if (iconHover === true) {
@@ -64,7 +70,8 @@ export default function Navbar() {
        </div>
       }
 
-      <div className="flex items-center h-full px-4 sm:px-6 md:px-8">
+      <div className="flex items-center h-full px-4 sm:px-6 md:px-8" 
+      >
 
         <img
           className="inline w-[3rem] mr-2 sm:hoverIconAnimation z-10"
@@ -72,11 +79,13 @@ export default function Navbar() {
           alt="Nissan Kumar"
           onMouseEnter={() => setIconHover(true)}
           onMouseLeave={() => setIconHover(false)}
+          data-aos="fade" data-aos-once='true' data-aos-duration='200'
         ></img>
 
         <div
           ref={iconHoverRef}
           className="bold text-lg text-lightest-slate sm:hover-underline-animation z-10 opacity-0 sm:opacity-100"
+          data-aos="fade" data-aos-once='true' data-aos-duration='200'
         >
           {" "}
           Nissan Kumar
@@ -88,6 +97,7 @@ export default function Navbar() {
           ref={menuOpenRef}
           onClick={() => setMenuOpen(true)}
           className="md:hidden block ml-auto cursor-pointer z-10"
+          data-aos="fade" data-aos-once='true' data-aos-duration='200'
         >
           <MenuSharp
             color={"#a6d7f8"}
@@ -116,11 +126,11 @@ export default function Navbar() {
         bg-navbar-blue hidden z-0 pt-0"
         >
         
-        <NavbarLinkGMedium nameID="#home" name='Home'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#about" name='About'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#skills" name='Skills'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#projects" name='Projects'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#contact" name='Contact'></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#home" name='Home' aosdelay = '0'></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#about" name='About' aosdelay = '100'></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#skills" name='Skills' aosdelay = '200'></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#projects" name='Projects' aosdelay = '300'></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#contact" name='Contact' aosdelay = '400'></NavbarLinkGMedium>
         
         <a
           href="https://drive.google.com/drive/folders/1A8sCuddeEbW5695GYlLzUiraKhrw9_30?usp=sharing"
@@ -128,6 +138,7 @@ export default function Navbar() {
           className=" text-global-bg bg-lightest-slate 
           px-5 rounded border-2 py-[0.2rem] bold text-md transition-all
           border-navbar-dark-green  hover:bg-light-slate"
+          data-aos="fade-down" data-aos-once='true' data-aos-duration='500' data-aos-delay='500'
           >
           Resume
         </a>

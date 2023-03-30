@@ -1,8 +1,13 @@
 import { React, useState, useEffect, useRef } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 function IntroImage() {
   const [hovered, setHovered] = useState(false);
   const hoverImageFrame = useRef(null);
+  useEffect(() => {
+    AOS.init();
+  }, [])
 
   useEffect(() => {
     if (hovered) {
@@ -29,7 +34,7 @@ function IntroImage() {
   }, [hovered]);
 
   return (
-    <div className="md:mb-0 mb-5">
+    <div className="md:mb-0 mb-5" data-aos="fade-right" data-aos-once='true' data-aos-duration='500'>
       <div
         ref={hoverImageFrame}
         className="w-[18rem] h-[18rem] bg-navbar-blue

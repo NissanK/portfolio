@@ -26,7 +26,10 @@ const projects = [
 const projectsDOM = [];
 
 for (let i = 0; i < projects.length; i++) {
-  projectsDOM.push(<Project project={projects[i]} key={i}></Project>);
+  if(i%2 === 0)
+    projectsDOM.push(<Project project={projects[i]} aosAnim='flip-right' key={i}></Project>);
+  else
+    projectsDOM.push(<Project project={projects[i]} aosAnim='flip-left' key={i}></Project>);
 }
 
 // The weird margins and padding in the section tag is for the anchor tag from Navbar

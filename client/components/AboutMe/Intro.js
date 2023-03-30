@@ -1,9 +1,16 @@
-import { React } from "react";
+import { React ,useEffect} from "react";
 import IntroImage from "./IntroImage";
 import { LogoGithub, LogoInstagram, LogoLinkedin } from "react-ionicons";
 import SectionHeading from "../Universal/SectionHeading";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 function Intro() {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <section className="my-10 md:my-16 scroll-mt-[80px]" id="about">
       <SectionHeading heading="About Me"></SectionHeading>
@@ -11,7 +18,7 @@ function Intro() {
       <div className="flex flex-col md:flex-row justify-center items-center my-6 md:my-10">
         <IntroImage></IntroImage>
 
-        <div className="md:w-1/2 mx-10">
+        <div className="md:w-1/2 mx-10" data-aos="fade-left" data-aos-once='true' data-aos-duration='500'>
           <h1 className="text-light-slate text-2xl md:text-3xl my-1">I&apos;m a 19 year old  developer from <span className="text-[#7cfcdf]">India</span>.</h1>
 
           <h1 className="text-light-slate text-lg md:text-xl my-3">I&apos;m Currently pursuing my <span className="text-highlight">B.Tech</span> in <span className="text-highlight">Mathematics and Computing</span> from <span className="text-highlight"> Delhi Technological University</span></h1>

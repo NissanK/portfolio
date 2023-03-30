@@ -1,8 +1,15 @@
-import React from "react";
+import React,{useEffect} from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 function SkillTag(props) {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
-    <div>
+    <div data-aos="zoom-in" data-aos-once='true' data-aos-duration='500' data-aos-delay={props.aosdelay}>
       <div
         className=" w-24 h-8 md:w-32 md:h-10 bg-light-slate flex justify-center items-center
         rounded-lg text-xs md:text-sm text-navbar-blue hover:bg-highlight
