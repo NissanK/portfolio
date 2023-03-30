@@ -29,8 +29,9 @@ for (let i = 0; i < skills.length; i++) {
   );
 }
 
-function skillsIndex() {
 
+function SkillsIndex() {
+  
   useEffect(() => {
     AOS.init();
   }, [])
@@ -60,4 +61,4 @@ function skillsIndex() {
   );
 }
 
-export default skillsIndex;
+export default SkillsIndex;
