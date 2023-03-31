@@ -68,7 +68,7 @@ function NavbarMobile() {
           ref={menuOpenRef}
           onClick={() => menuOpenClick()}
           className="md:hidden block mr-4 cursor-pointer z-10"
-          data-aos="fade" data-aos-duration='200'
+          data-aos="fade" data-aos-duration='200' data-aos-one='true'
         >
           <MenuSharp
             color={"#a6d7f8"}
