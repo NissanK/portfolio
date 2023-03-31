@@ -14,39 +14,46 @@ function NavbarMobile() {
     const menuRef = useRef(null);
 
     useEffect(() => {
-        if (menuOpen === true) {
-            menuOpenRef.current.classList.remove("block");
-            menuOpenRef.current.classList.add("hidden");
-        
-            menuCloseRef.current.classList.add("block");
-            menuCloseRef.current.classList.remove("hidden");
-        
-            menuRef.current.classList.remove(
-                "opacity-0",
-                "pointer-events-none",
-                "top-[-350px]"
-            );
-            menuRef.current.classList.add("opacity-100", "top-0");
-        } else {
-            menuOpenRef.current.classList.remove("hidden");
-            menuOpenRef.current.classList.add("block");
-        
-            menuCloseRef.current.classList.add("hidden");
-            menuCloseRef.current.classList.remove("block");
-        
-            menuRef.current.classList.remove("opacity-100", "top-0");
-            menuRef.current.classList.add(
-                "opacity-0",
-                "pointer-events-none",
-                "top-[-350px]"
-            );
-        }
-    }, [menuOpen]);
+        AOS.init();
+    }, [])
+
+    const menuOpenClick = () =>{
+        setMenuOpen(true);
+        menuOpenRef.current.classList.remove("block");
+        menuOpenRef.current.classList.add("hidden");
+    
+        menuCloseRef.current.classList.add("block");
+        menuCloseRef.current.classList.remove("hidden");
+
+        menuRef.current.classList.remove(
+            "opacity-0",
+            "pointer-events-none",
+        );
+        menuRef.current.classList.add("opacity-100");
+
+    }
+
+    const menuCloseClick = () =>{
+        setMenuOpen(false);
+        menuOpenRef.current.classList.remove("hidden");
+        menuOpenRef.current.classList.add("block");
+    
+        menuCloseRef.current.classList.add("hidden");
+        menuCloseRef.current.classList.remove("block");
+    
+        menuRef.current.classList.remove("opacity-100");
+        menuRef.current.classList.add(
+            "opacity-0",
+            "pointer-events-none",
+        );
+    }
 
   return (
     <nav className="w-full py-4 bg-navbar-blue md:hidden flex justify-between items-center sticky z-10 top-0">
 
         <NavbarIcon></NavbarIcon>
+
+        {/* backdrop code below  */}
         {menuOpen &&
         <div
             onClick={()=> setMenuOpen(false)}
@@ -59,9 +66,9 @@ function NavbarMobile() {
 
         <span
           ref={menuOpenRef}
-          onClick={() => setMenuOpen(true)}
+          onClick={() => menuOpenClick()}
           className="md:hidden block mr-4 cursor-pointer z-10"
-          data-aos="fade" data-aos-once='true' data-aos-duration='200'
+          data-aos="fade" data-aos-duration='200'
         >
           <MenuSharp
             color={"#a6d7f8"}
@@ -72,7 +79,7 @@ function NavbarMobile() {
         </span>
         <span
           ref={menuCloseRef}
-          onClick={() => setMenuOpen(false)}
+          onClick={() => menuCloseClick()}
           className="md:hidden hidden mr-4 cursor-pointer z-10"
         >
           <CloseSharp
@@ -86,29 +93,30 @@ function NavbarMobile() {
         {/* for below medium screen devices  */}
         <div
             ref={menuRef}
-            className="w-[350px] h-[350px] bg-navbar-blue absolute
-                top-[-350px] right-0 pointer-events-none opacity-0 rounded-bl-full
+            className="w-[350px] h-[350px] bg-navbar-blue absolute pointer-events-none opacity-0
+                top-0 right-0 rounded-bl-full
                 transition-all ease-in duration-500"
         >
-        <ul className=" pt-[4.5rem]">
+            <ul className=" pt-[4.5rem]">
 
-          <NavbarLinkBMedium nameID="#home" name="Home"></NavbarLinkBMedium>
-          <NavbarLinkBMedium nameID="#about" name="About"></NavbarLinkBMedium>
-          <NavbarLinkBMedium nameID="#skills" name="Skills"></NavbarLinkBMedium>
-          <NavbarLinkBMedium nameID="#projects" name="Projects"></NavbarLinkBMedium>
-          <NavbarLinkBMedium nameID="#contact" name="Contact"></NavbarLinkBMedium>
-          
-          <button
-            className="bold text-md text-global-bg bg-lightest-slate 
-                    px-6 rounded border-2 border-navbar-dark-green 
-                    py-1 ml-[50%] mr-[22%] flex justify-center
-                    hover:bg-light-slate transition-all"
-          >
-            Resume
-          </button>
+            <NavbarLinkBMedium nameID="#home" name="Home"></NavbarLinkBMedium>
+            <NavbarLinkBMedium nameID="#about" name="About"></NavbarLinkBMedium>
+            <NavbarLinkBMedium nameID="#skills" name="Skills"></NavbarLinkBMedium>
+            <NavbarLinkBMedium nameID="#projects" name="Projects"></NavbarLinkBMedium>
+            <NavbarLinkBMedium nameID="#contact" name="Contact"></NavbarLinkBMedium>
+            
+            <a href="https://drive.google.com/drive/folders/1A8sCuddeEbW5695GYlLzUiraKhrw9_30?usp=sharing"
+            target={"_blank"} rel="noreferrer"
+                className="bold text-md text-global-bg bg-lightest-slate 
+                        px-6 rounded border-2 border-navbar-dark-green 
+                        py-1 ml-[50%] mr-[22%] flex justify-center
+                        hover:bg-light-slate transition-all"
+            >
+                Resume
+            </a>
 
-        </ul>
-      </div>
+            </ul>
+        </div>
     </nav>
 
   )

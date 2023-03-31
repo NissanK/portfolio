@@ -1,20 +1,12 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import NavbarLinkGMedium from "./NavbarLinkGMedium";
-import AOS from 'aos';
-import 'aos/dist/aos.css'
 import NavbarIcon from "./NavbarIcon";
 
 export default function Navbar() {
 
-  useEffect(() => {
-    AOS.init();
-  }, [])
-
-
   return (
     <nav className="w-full py-4 bg-navbar-blue hidden md:flex md:items-center md:justify-between md:sticky z-10 top-0">
 
-  
       <NavbarIcon></NavbarIcon>
       {/* for medium above screen devices  */}
       <ul
