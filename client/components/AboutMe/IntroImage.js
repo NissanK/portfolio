@@ -34,7 +34,7 @@ function IntroImage() {
   }, [hovered]);
 
   return (
-    <div className="md:mb-0 mb-5" data-aos="fade-right" data-aos-once='true' data-aos-duration='500'>
+    <div className="md:mb-0 mb-5" data-aos="fade-up" data-aos-once='true' data-aos-duration='500'>
       <div
         ref={hoverImageFrame}
         className="w-[18rem] h-[18rem] bg-navbar-blue

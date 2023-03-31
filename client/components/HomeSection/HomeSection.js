@@ -42,12 +42,14 @@ function Home() {
       data-aos="fade-up" data-aos-once='true' data-aos-duration='500' data-aos-delay='1000'>Hi I am,</h1>
 
       <h1 className=" text-5xl md:text-8xl my-3 text-lightest-slate"
-      data-aos="fade-up" data-aos-once='true' data-aos-duration='500' data-aos-delay='1100'>
+      data-aos="fade-up" data-aos-once='true' data-aos-duration='500' data-aos-delay='1100'
+      >
         Nissan Kumar
       </h1>
 
       <h1 className=" text-4xl md:text-6xl my-3 text-dark-slate"
-      data-aos="fade-up" data-aos-once='true' data-aos-duration='500' data-aos-delay='1200'>
+      data-aos="fade-up" data-aos-once='true' data-aos-duration='500' data-aos-delay='1200'
+      >
         I am a Student and a Developer
       </h1>
 

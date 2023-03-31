@@ -7,6 +7,7 @@ import SkillsIndex from '../components/SkillsSection/SkillsIndex';
 import ProjectsIndex from '../components/Projects/ProjectsIndex';
 import ContactIndex from '../components/Contact/ContactIndex';
 import Footer from '../components/Footer/Footer';
+import NavbarMobile from '../components/Navbar/NavbarMobile';
 
 export default function Home() {
 
@@ -23,6 +24,7 @@ export default function Home() {
       <span></span>
       <span></span>
       <Navbar></Navbar>
+      <NavbarMobile></NavbarMobile>
       <Link></Link>
       <HomeSection></HomeSection>
       <Intro></Intro>

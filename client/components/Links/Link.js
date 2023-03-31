@@ -11,10 +11,10 @@ function Link() {
 
   return (
     <div
-      className="w-14 top-1/2 -translate-y-1/2 float-left
+      className="w-14 top-[40%] -translate-y-[40%]  float-left
       bg-navbar-blue p-1 rounded-tr rounded-br
       hidden md:sticky md:block"
-      data-aos="fade-right" data-aos-once='true' data-aos-duration='500' data-aos-delay='1800'
+      data-aos="fade-right" data-aos-once='true' data-aos-duration='500' data-aos-delay='1800' 
     >
       <a
         href="https://www.linkedin.com/in/nissan-kumar-554a7a224/"
