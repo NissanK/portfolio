@@ -1,43 +1,44 @@
-import React,{ useEffect, useState, useRef } from 'react'
+import React,{ useState, useRef } from 'react'
 import NavbarLinkBMedium from "./NavbarLinkBMedium";
-import AOS from 'aos';
 import { MenuSharp } from "react-ionicons";
 import { CloseSharp } from "react-ionicons";
 
-import 'aos/dist/aos.css'
 import NavbarIcon from './NavbarIcon';
 
 function NavbarMobile() {
     const [menuOpen, setMenuOpen] = useState(false);
     const menuOpenRef = useRef(null);
     const menuCloseRef = useRef(null);
+    const backdropRef = useRef(null);
     const menuRef = useRef(null);
-
-    useEffect(() => {
-        AOS.init();
-    }, [])
 
     const menuOpenClick = () =>{
         setMenuOpen(true);
         menuOpenRef.current.classList.remove("block");
         menuOpenRef.current.classList.add("hidden");
-    
+
+        backdropRef.current.classList.add("absolute");
+        backdropRef.current.classList.remove("hidden");
+        
         menuCloseRef.current.classList.add("block");
         menuCloseRef.current.classList.remove("hidden");
-
+        
         menuRef.current.classList.remove(
             "opacity-0",
             "pointer-events-none",
         );
         menuRef.current.classList.add("opacity-100");
-
-    }
-
-    const menuCloseClick = () =>{
+        
+      }
+      
+      const menuCloseClick = () =>{
         setMenuOpen(false);
         menuOpenRef.current.classList.remove("hidden");
         menuOpenRef.current.classList.add("block");
-    
+
+        backdropRef.current.classList.add("hidden");
+        backdropRef.current.classList.remove("absolute");
+        
         menuCloseRef.current.classList.add("hidden");
         menuCloseRef.current.classList.remove("block");
     
@@ -54,13 +55,12 @@ function NavbarMobile() {
         <NavbarIcon></NavbarIcon>
 
         {/* backdrop code below  */}
-        {menuOpen &&
-        <div
-            onClick={()=> setMenuOpen(false)}
-            onTouchMove={()=> setMenuOpen(false)}
-            className='bg-slate-400 h-screen w-screen absolute top-0 left-0 opacity-0'>
+
+        <div ref={backdropRef}
+            onClick={()=> menuCloseClick()}
+            onTouchMove={()=> menuCloseClick()}
+            className='bg-slate-400 h-screen w-screen hidden top-0 left-0 opacity-0'>
         </div>
-        }
 
         {/* burger menu for below medium screen  */}
 
@@ -68,7 +68,6 @@ function NavbarMobile() {
           ref={menuOpenRef}
           onClick={() => menuOpenClick()}
           className="md:hidden block mr-4 cursor-pointer z-10"
-          data-aos="fade" data-aos-duration='200' data-aos-one='true'
         >
           <MenuSharp
             color={"#a6d7f8"}
