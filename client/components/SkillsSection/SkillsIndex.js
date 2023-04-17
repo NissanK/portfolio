@@ -1,5 +1,6 @@
 import React,{useEffect} from "react";
 import SectionHeading from "../Universal/SectionHeading";
+import { ReturnUpForwardOutline } from 'react-ionicons'
 import SkillTag from "./SkillTag";
 import AOS from 'aos';
 import 'aos/dist/aos.css'
@@ -44,10 +45,32 @@ function SkillsIndex() {
         {skillElements}
       </div>
 
+      <div className="text-light-slate text-lg md:text-xl mt-2 mb-2 md:mb-2 mx-[10%]"
+        data-aos="fade-up" data-aos-once='true' data-aos-duration='500' data-aos-delay='1400'
+      >
+        <ReturnUpForwardOutline
+          color={'#00000'} 
+          height="33px"
+          cssClasses={"inline"}
+          width="33px"
+        /> Specialist on {" "}
+        <a
+          href="https://leetcode.com/abandonedthrasher/"
+          target={"_blank"} rel="noreferrer"
+          className="text-highlight cursor-pointer hover-underline-animation-highlight transition-all"
+        >
+          Codeforces
+        </a>{" "}
+      </div>
       <div className="text-light-slate text-lg md:text-xl mt-2 mb-6 md:mb-10 mx-[10%]"
         data-aos="fade-up" data-aos-once='true' data-aos-duration='500' data-aos-delay='1400'
       >
-        Here is the link to my{" "}
+        <ReturnUpForwardOutline
+          color={'#00000'} 
+          height="33px"
+          cssClasses={"inline"}
+          width="33px"
+        /> Solved over 400+ questions on {" "}
         <a
           href="https://leetcode.com/abandonedthrasher/"
           target={"_blank"} rel="noreferrer"
@@ -55,7 +78,7 @@ function SkillsIndex() {
         >
           Leetcode
         </a>{" "}
-        profile where I practice most of my DSA questions
+        with verying difficulty
       </div>
     </section>
   );
