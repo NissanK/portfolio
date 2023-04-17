@@ -55,7 +55,7 @@ function SkillsIndex() {
           width="33px"
         /> Specialist on {" "}
         <a
-          href="https://leetcode.com/abandonedthrasher/"
+          href="https://codeforces.com/profile/NissanK"
           target={"_blank"} rel="noreferrer"
           className="text-highlight cursor-pointer hover-underline-animation-highlight transition-all"
         >
