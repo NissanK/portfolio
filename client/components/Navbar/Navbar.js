@@ -20,7 +20,7 @@ export default function Navbar() {
         <NavbarLinkGMedium nameID="#projects" name='Projects' aosdelay = '300'></NavbarLinkGMedium>
         <NavbarLinkGMedium nameID="#contact" name='Contact' aosdelay = '400'></NavbarLinkGMedium>
         
-        <a
+        {/* <a
           href="https://drive.google.com/drive/folders/1A8sCuddeEbW5695GYlLzUiraKhrw9_30?usp=sharing"
           target={"_blank"} rel="noreferrer"
           className=" text-global-bg bg-lightest-slate 
@@ -29,7 +29,7 @@ export default function Navbar() {
           data-aos="fade-down" data-aos-once='true' data-aos-duration='500' data-aos-delay='500'
           >
           Resume
-        </a>
+        </a> */}
 
       </ul>
 

@@ -104,7 +104,7 @@ function NavbarMobile() {
             <NavbarLinkBMedium nameID="#projects" name="Projects"></NavbarLinkBMedium>
             <NavbarLinkBMedium nameID="#contact" name="Contact"></NavbarLinkBMedium>
             
-            <a href="https://drive.google.com/drive/folders/1A8sCuddeEbW5695GYlLzUiraKhrw9_30?usp=sharing"
+            {/* <a href="https://drive.google.com/drive/folders/1A8sCuddeEbW5695GYlLzUiraKhrw9_30?usp=sharing"
             target={"_blank"} rel="noreferrer"
                 className="bold text-md text-global-bg bg-lightest-slate 
                         px-6 rounded border-2 border-navbar-dark-green 
@@ -112,7 +112,7 @@ function NavbarMobile() {
                         hover:bg-light-slate transition-all"
             >
                 Resume
-            </a>
+            </a> */}
 
             </ul>
         </div>
