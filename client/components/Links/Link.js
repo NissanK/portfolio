@@ -24,23 +24,11 @@ function Link() {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-    function throttle (callbackFn, limit) {
-      let wait = false;                  
-      return function () {              
-          if (!wait) {                  
-              callbackFn.call();           
-              wait = true;               
-              setTimeout(function () {   
-                  wait = false;          
-              }, limit);
-          }
-      }
-    }
     handleScroll();
 
-    window.addEventListener("scroll", throttle(handleScroll, 10));
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", throttle(handleScroll, 10));
+      window.removeEventListener("scroll", handleScroll);
     }
   }, []);
 
