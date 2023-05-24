@@ -1,15 +1,9 @@
-import { React ,useEffect} from "react";
+import { React} from "react";
 import IntroImage from "./IntroImage";
 import { LogoGithub, LogoInstagram, LogoLinkedin } from "react-ionicons";
 import SectionHeading from "../Universal/SectionHeading";
-import AOS from 'aos';
-import 'aos/dist/aos.css'
 
 function Intro() {
-
-  useEffect(() => {
-    AOS.init();
-  }, [])
 
   return (
     <section className="my-10 md:my-16 scroll-mt-[80px]" id="about">

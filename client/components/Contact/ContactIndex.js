@@ -1,8 +1,6 @@
-import React,{useState,useRef,useEffect} from "react";
+import React,{useState,useRef} from "react";
 import SectionHeading from "../Universal/SectionHeading";
 import emailjs from "@emailjs/browser";
-import AOS from 'aos';
-import 'aos/dist/aos.css'
 
 function ContactIndex() {
   const formRef = useRef(null);
@@ -70,10 +68,6 @@ function ContactIndex() {
     }
   }
 
-  useEffect(() => {
-    AOS.init();
-  }, [])
-  
 
   return (
     <section id="contact" className="my-10 md:my-16 scroll-mt-[80px]">

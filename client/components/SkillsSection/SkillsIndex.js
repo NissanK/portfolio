@@ -1,9 +1,7 @@
-import React,{useEffect} from "react";
+import React from "react";
 import SectionHeading from "../Universal/SectionHeading";
 import { ReturnUpForwardOutline } from 'react-ionicons'
 import SkillTag from "./SkillTag";
-import AOS from 'aos';
-import 'aos/dist/aos.css'
 
 const skills = [
   { name: "DSA" },
@@ -33,9 +31,9 @@ for (let i = 0; i < skills.length; i++) {
 
 function SkillsIndex() {
   
-  useEffect(() => {
-    AOS.init();
-  }, [])
+  // useEffect(() => {
+  //   AOS.init();
+  // }, [])
 
   return (
     <section id="skills" className="my-10 md:my-16 scroll-mt-[80px]" >

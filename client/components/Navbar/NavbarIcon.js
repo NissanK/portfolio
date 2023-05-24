@@ -1,14 +1,8 @@
 import React,{useEffect,useState,useRef} from 'react'
-import AOS from 'aos';
-import 'aos/dist/aos.css'
 
 function NavbarIcon() {
     const [iconHover, setIconHover] = useState(false);
     const iconHoverRef = useRef(null);
-
-    useEffect(() => {
-        AOS.init();
-    }, []);
 
     useEffect(() => {
         if (iconHover === true) {

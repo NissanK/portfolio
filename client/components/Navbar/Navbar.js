@@ -1,37 +1,81 @@
-import React from "react";
+import React,{useState,useRef,useEffect} from "react";
 import NavbarLinkGMedium from "./NavbarLinkGMedium";
 import NavbarIcon from "./NavbarIcon";
 
 export default function Navbar() {
 
-  return (
-    <nav className="w-full py-4 bg-navbar-blue hidden md:flex md:items-center md:justify-between md:sticky z-10 top-0">
+  const [isNavbarOpen, setIsNavbarOpen] = useState(true);
+  const [mouseNavbar, setMouseNavbar] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const navbarRef = useRef(null);
 
-      <NavbarIcon></NavbarIcon>
+  const mouseEnterHandler = () =>{
+    if(isNavbarOpen === false){
+      setIsNavbarOpen(true);
+    }
+    setMouseNavbar(true);
+  }
+  const mouseLeaveHandler = () =>{
+    if(isNavbarOpen === true && scrollY !== 0){
+      setIsNavbarOpen(false);
+    }
+    setMouseNavbar(false);
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    
+    handleScroll();
+    function throttle (callbackFn, limit) {
+      let wait = false;                  
+      return function () {              
+          if (!wait) {                  
+              callbackFn.call();           
+              wait = true;               
+              setTimeout(function () {   
+                  wait = false;          
+              }, limit);
+          }
+      }
+    }
+
+    window.addEventListener("scroll", throttle(handleScroll, 10));
+    return () => {
+      window.removeEventListener("scroll", throttle(handleScroll, 10));
+    }
+  }, []);
+
+  useEffect(() => {
+    if(mouseNavbar === false && scrollY !== 0){
+      setIsNavbarOpen(false);
+    }
+    else if(scrollY === 0){
+      setIsNavbarOpen(true);
+    }
+  }, [scrollY,mouseNavbar])
+  
+  return (
+    <nav className={isNavbarOpen? "transition-all w-full py-4 bg-navbar-blue hidden md:flex md:items-center md:justify-between md:sticky z-10 top-0"
+      : " transition-all w-full bg-navbar-blue hidden md:flex md:sticky z-10 top-0 h-4 opacity-30"}
+     ref={navbarRef} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}
+    >
+      {isNavbarOpen?<NavbarIcon></NavbarIcon> : null}
+      
       {/* for medium above screen devices  */}
-      <ul
+      {isNavbarOpen ? <ul
         className="md:flex items-center h-full px-8 md:space-x-8 lg:space-x-12
         bg-navbar-blue hidden z-0 pt-0"
         >
         
-        <NavbarLinkGMedium nameID="#home" name='Home' aosdelay = '0'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#about" name='About' aosdelay = '100'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#skills" name='Skills' aosdelay = '200'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#projects" name='Projects' aosdelay = '300'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#contact" name='Contact' aosdelay = '400'></NavbarLinkGMedium>
+      <NavbarLinkGMedium nameID="#home" name='Home' aosdelay = '0'></NavbarLinkGMedium>
+      <NavbarLinkGMedium nameID="#about" name='About' aosdelay = '100'></NavbarLinkGMedium>
+      <NavbarLinkGMedium nameID="#skills" name='Skills' aosdelay = '200'></NavbarLinkGMedium>
+      <NavbarLinkGMedium nameID="#projects" name='Projects' aosdelay = '300'></NavbarLinkGMedium>
+      <NavbarLinkGMedium nameID="#contact" name='Contact' aosdelay = '400'></NavbarLinkGMedium>
         
-        {/* <a
-          href="https://drive.google.com/drive/folders/1A8sCuddeEbW5695GYlLzUiraKhrw9_30?usp=sharing"
-          target={"_blank"} rel="noreferrer"
-          className=" text-global-bg bg-lightest-slate 
-          px-5 rounded border-2 py-[0.2rem] bold text-md transition-all
-          border-navbar-dark-green  hover:bg-light-slate"
-          data-aos="fade-down" data-aos-once='true' data-aos-duration='500' data-aos-delay='500'
-          >
-          Resume
-        </a> */}
-
-      </ul>
+      </ul> : null}
 
     </nav>
   );

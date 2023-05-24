@@ -9,7 +9,15 @@ import ContactIndex from '../components/Contact/ContactIndex';
 import Footer from '../components/Footer/Footer';
 import NavbarMobile from '../components/Navbar/NavbarMobile';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+  
 
   return (
     <div className='bg-gradient-to-r from-[#0e5b8f] to-global-bg' id='home'>

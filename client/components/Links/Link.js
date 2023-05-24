@@ -1,21 +1,66 @@
-import React,{useEffect} from "react";
+import React,{useEffect,useState} from "react";
 import { LogoGithub, LogoInstagram, LogoLinkedin } from "react-ionicons";
-import AOS from 'aos';
-import 'aos/dist/aos.css'
 
 function Link() {
 
+  const [isNavbarOpen, setIsNavbarOpen] = useState(true);
+  const [mouseNavbar, setMouseNavbar] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  const mouseEnterHandler = () =>{
+    if(isNavbarOpen === false){
+      setIsNavbarOpen(true);
+    }
+    setMouseNavbar(true);
+  }
+  const mouseLeaveHandler = () =>{
+    if(isNavbarOpen === true && scrollY !== 0){
+      setIsNavbarOpen(false);
+    }
+    setMouseNavbar(false);
+  }
+
   useEffect(() => {
-    AOS.init();
-  }, [])
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    function throttle (callbackFn, limit) {
+      let wait = false;                  
+      return function () {              
+          if (!wait) {                  
+              callbackFn.call();           
+              wait = true;               
+              setTimeout(function () {   
+                  wait = false;          
+              }, limit);
+          }
+      }
+    }
+    handleScroll();
+
+    window.addEventListener("scroll", throttle(handleScroll, 10));
+    return () => {
+      window.removeEventListener("scroll", throttle(handleScroll, 10));
+    }
+  }, []);
+
+  useEffect(() => {
+    if(mouseNavbar === false && scrollY !== 0){
+      setIsNavbarOpen(false);
+    }
+    else if(scrollY === 0){
+      setIsNavbarOpen(true);
+    }
+  }, [scrollY,mouseNavbar])
 
   return (
     <div
-      className="w-14 top-[40%] -translate-y-[40%]  float-left
-      bg-navbar-blue p-1 rounded-tr rounded-br
-      hidden md:sticky md:block"
-      data-aos="fade-right" data-aos-once='true' data-aos-duration='500' data-aos-delay='1800' 
+      className={isNavbarOpen? "transition-all w-14 top-[50%] -translate-y-[50%]  float-left  bg-navbar-blue p-1 rounded-tr rounded-br hidden md:sticky md:block" :
+       "w-4 h-[9.5rem] top-[50%] transition-all -translate-y-[50%]  float-left bg-navbar-blue rounded-tr rounded-br hidden md:sticky md:block opacity-30"}
+      // data-aos="fade-right" data-aos-once='true' data-aos-duration='500' data-aos-delay='1800' 
+      onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}
     >
+      {isNavbarOpen? 
       <a
         href="https://www.linkedin.com/in/nissan-kumar-554a7a224/"
         target={"_blank"} rel="noreferrer"
@@ -28,11 +73,11 @@ function Link() {
           height="2rem"
           width="2rem"
         />
-      </a>
-      <a
+      </a> : null}
+      {isNavbarOpen? <a
         href="https://github.com/NissanK"
         target={"_blank"} rel="noreferrer"
-        className="w-12 h-12 rounded bg-navbar-blue hover:bg-navbar-dark-green 
+        className="w-12 h-12 rounded bg-navbar-blue hover:bg-navbar-dark-green
         cursor-pointer flex justify-center items-center transition-all"
       >
         <LogoGithub
@@ -41,11 +86,11 @@ function Link() {
           height="2rem"
           width="2rem"
         />
-      </a>
-      <a
+      </a>: null}
+      {isNavbarOpen ?<a
         href="https://www.instagram.com/nissan_kumar72/"
         target={"_blank"} rel="noreferrer"
-        className="w-12 h-12 rounded bg-navbar-blue hover:bg-navbar-dark-green 
+        className="w-12 h-12 rounded bg-navbar-blue hover:bg-navbar-dark-green
         cursor-pointer flex justify-center items-center transition-all"
       >
         <LogoInstagram
@@ -54,7 +99,7 @@ function Link() {
           height="2rem"
           width="2rem"
         />
-      </a>
+      </a> : null}
     </div>
   );
 }

@@ -1,16 +1,16 @@
 import React, { useEffect, useState, useRef } from "react";
 import { FiGithub } from "react-icons/fi";
 import { GoLinkExternal } from "react-icons/go";
-import AOS from 'aos';
-import 'aos/dist/aos.css'
+// import AOS from 'aos';
+// import 'aos/dist/aos.css'
 
 function Project({ project , aosAnim }) {
   const [hover, setHover] = useState(false);
   const pImageRef = useRef(null);
 
-  useEffect(() => {
-    AOS.init();
-  }, [])
+  // useEffect(() => {
+  //   AOS.init();
+  // }, [])
 
   useEffect(() => {
     if (hover) {

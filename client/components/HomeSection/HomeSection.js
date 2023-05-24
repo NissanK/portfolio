@@ -1,12 +1,9 @@
 import React,{useRef,useEffect} from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css'
 
 function Home() {
   const linkRef = useRef(null);
 
   useEffect(() => {
-    AOS.init();
     function anchorSmoothScroll(e){
         e.preventDefault();
         document.querySelector(this.getAttribute("href")).scrollIntoView({
