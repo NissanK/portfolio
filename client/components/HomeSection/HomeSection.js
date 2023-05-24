@@ -18,7 +18,7 @@ function Home() {
   }, []);
 
   return (
-    <section className="flex mx-auto h-[90vh] w-4/5 flex-col justify-center wrapper">
+    <section className="flex mx-auto h-[90vh] w-4/5 flex-col justify-center wrapper md:pt-[80px]">
       {/* background animation spans check global css */}
       <span></span>
       <span></span>

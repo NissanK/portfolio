@@ -42,11 +42,12 @@ function Link() {
   }, [scrollY,mouseNavbar])
 
   return (
+    <div className=" top-[50%] -translate-y-[50%] float-left hidden md:sticky md:block">
     <div
-      className={isNavbarOpen? "transition-all w-14 top-[50%] -translate-y-[50%]  float-left  bg-navbar-blue p-1 rounded-tr rounded-br hidden md:sticky md:block" :
-       "w-4 h-[9.5rem] top-[50%] transition-all -translate-y-[50%]  float-left bg-navbar-blue rounded-tr rounded-br hidden md:sticky md:block opacity-30"}
+      className={isNavbarOpen? "transition-all w-14 top-[50%] -translate-y-[50%]  float-left  bg-navbar-blue p-1 rounded-tr rounded-br hidden md:absolute md:block" :
+       "w-4 h-[9.5rem] top-[50%] transition-all -translate-y-[50%] cursor-pointer  float-left bg-navbar-blue rounded-tr rounded-br hidden md:absolute md:block opacity-30"}
       // data-aos="fade-right" data-aos-once='true' data-aos-duration='500' data-aos-delay='1800' 
-      onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}
+      onClick={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}
     >
       {isNavbarOpen? 
       <a
@@ -88,6 +89,7 @@ function Link() {
           width="2rem"
         />
       </a> : null}
+    </div>
     </div>
   );
 }

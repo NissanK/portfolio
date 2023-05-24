@@ -45,9 +45,10 @@ export default function Navbar() {
   }, [scrollY,mouseNavbar])
   
   return (
-    <nav className={isNavbarOpen? "transition-all w-full py-4 bg-navbar-blue hidden md:flex md:items-center md:justify-between md:sticky z-10 top-0"
-      : " transition-all w-full bg-navbar-blue hidden md:flex md:sticky z-10 top-0 h-4 opacity-30"}
-     ref={navbarRef} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}
+    <div className="w-full  md:sticky z-10 top-0">
+    <nav className={isNavbarOpen? "transition-all w-full py-4 bg-navbar-blue hidden md:flex md:items-center md:justify-between md:absolute z-10 top-0"
+      : " transition-all w-full bg-navbar-blue hidden md:flex md:absolute z-10 top-0 h-4 opacity-30 cursor-pointer"}
+     ref={navbarRef} onClick={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}
     >
       {isNavbarOpen?<NavbarIcon></NavbarIcon> : null}
       
@@ -66,5 +67,6 @@ export default function Navbar() {
       </ul> : null}
 
     </nav>
+    </div>
   );
 }
