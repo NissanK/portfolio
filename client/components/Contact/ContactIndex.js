@@ -94,9 +94,9 @@ function ContactIndex() {
               value={userForm.name}
               required
               onChange={handleInputs}
-              className="block bg-white/30 rounded p-2 w-full my-1 text-navbar-blue/80
+              className="block bg-white/40 rounded p-2 w-full my-1 text-navbar-blue/80
             focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg
-            invalid:border-error invalid:text-error focus:invalid:border-error focus:invalid:ring-error
+           
             text-sm placeholder-lightest-slate"
             ></input>
           </label>
@@ -111,9 +111,9 @@ function ContactIndex() {
               required
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               onChange={handleInputs}
-              className="block bg-white/30 rounded p-2 w-full my-1 text-navbar-blue/80
+              className="block bg-white/40 rounded p-2 w-full my-1 text-navbar-blue/80
             focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg
-            invalid:border-error invalid:text-error focus:invalid:border-error focus:invalid:ring-error
+           
             text-sm placeholder-lightest-slate"
             ></input>
           </label>
@@ -126,9 +126,9 @@ function ContactIndex() {
               placeholder="Type your message here" name="message"
               value={userForm.message} required
               onChange={handleInputs}
-              className="block bg-white/30 rounded p-2  my-1 text-navbar-blue/80 w-full !h-[100px] md:!h-[150px]
+              className="block bg-white/40 rounded p-2  my-1 text-navbar-blue/80 w-full !h-[100px] md:!h-[150px]
             focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg resize-none
-            invalid:border-error invalid:text-error focus:invalid:border-error focus:invalid:ring-error
+            
             text-sm placeholder-lightest-slate"
             ></textarea>
           </label> 

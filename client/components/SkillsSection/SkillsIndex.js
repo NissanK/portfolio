@@ -16,7 +16,8 @@ const skills = [
   { name: "Bootstrap 5" },
   { name: "CSS3" },
   { name: "HTML5" },
-  { name: "Github" },
+  { name: "Git/Github" },
+  { name: "MySQL" },
   { name: "MongoDB" }
 ];
 

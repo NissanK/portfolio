@@ -7,7 +7,7 @@ const projects = [
     name: "TEDxDTU",
     image: "/images/TedXDTU.png",
     description:
-      "TEDxDTU is a self-organized branch of the humongous non-profit organization TEDx. A team of developers consisting of DTU students designed the website.",
+      "TEDxDTU is a self-organized branch of the humongous non-profit organization TEDx. A team of developers consisting of DTU students designed the website for it's upcoming TEDx Event.",
     tools: ["Next.js", "Node.js", "Tailwind CSS", "Express.js"],
     github: "https://github.com/TEDxDTU/Web",
     link: "https://tedxdtu.in/",
@@ -16,8 +16,8 @@ const projects = [
     name: "Rat in a Maze",
     image: "/images/RatInAMaze.png",
     description:
-      "This is a visualization of the GFG problem Rat In A Maze. It will display all the possible solutions to the matrix",
-    tools: ["React.js", "CSS", "DSA"],
+      "Implemented a live visualization of the classic DSA problem Rat In a Maze, dynamically generating output based on user input.",
+    tools: ["React.js", "CSS3", "DSA", "Netlify"],
     github: "https://github.com/NissanK/Rat_In_A_Maze_Visualization",
     link: "https://funny-malabi-8c3e4e.netlify.app/",
   },
