@@ -71,7 +71,7 @@ function SkillsIndex() {
           width="33px"
         /> Solved over 400+ questions on {" "}
         <a
-          href="https://leetcode.com/abandonedthrasher/"
+          href="https://leetcode.com/nissankumar/"
           target={"_blank"} rel="noreferrer"
           className="text-highlight cursor-pointer hover-underline-animation-highlight transition-all"
         >

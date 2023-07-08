@@ -95,9 +95,8 @@ function ContactIndex() {
               required
               onChange={handleInputs}
               className="block bg-white/40 rounded p-2 w-full my-1 text-navbar-blue/80
-            focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg
-           
-            text-sm placeholder-lightest-slate"
+              focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg
+              text-sm placeholder-lightest-slate"
             ></input>
           </label>
           <label className="block py-2">
@@ -112,9 +111,8 @@ function ContactIndex() {
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               onChange={handleInputs}
               className="block bg-white/40 rounded p-2 w-full my-1 text-navbar-blue/80
-            focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg
-           
-            text-sm placeholder-lightest-slate"
+              focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg
+              text-sm placeholder-lightest-slate"
             ></input>
           </label>
 
@@ -127,9 +125,8 @@ function ContactIndex() {
               value={userForm.message} required
               onChange={handleInputs}
               className="block bg-white/40 rounded p-2  my-1 text-navbar-blue/80 w-full !h-[100px] md:!h-[150px]
-            focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg resize-none
-            
-            text-sm placeholder-lightest-slate"
+              focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg resize-none
+              text-sm placeholder-lightest-slate"
             ></textarea>
           </label> 
 
