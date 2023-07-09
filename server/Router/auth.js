@@ -40,7 +40,7 @@ router.post('/submit', async (req,res)=>{
         },
         parent: projectPath,
     });
-
+    return res.status(400);
     const [ response ] = await client.createAssessment(request);
     if (!response.tokenProperties.valid) {
         console.log("The CreateAssessment call failed because the token was: " +
