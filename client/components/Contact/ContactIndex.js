@@ -123,7 +123,6 @@ function ContactIndex() {
               placeholder="nissan@example.com" name="email"
               value={userForm.email}
               required
-              pattern="[-a-zA-Z0-9~!$%^&amp;*_=+}{'?]+(\.[-a-zA-Z0-9~!$%^&amp;*_=+}{'?]+)*@([a-zA-Z0-9_][-a-zA-Z0-9_]*(\.[-a-zA-Z0-9_]+)*\.([cC][oO][mM]))(:[0-9]{1,5})?"
               onChange={handleInputs}
               className="block bg-white/40 rounded p-2 w-full my-1 text-navbar-blue/80
               focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg

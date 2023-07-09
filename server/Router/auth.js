@@ -15,7 +15,7 @@ router.get('/',(req,res)=>{
     res.send('Hello world from the server router');
 })
 
-router.post('/submit', async(req,res)=>{
+router.post('/submit', async (req,res)=>{
     const {data,token} = req.body;
     const {name,email,message} = data;
     if(!name || !email || !message){
@@ -25,8 +25,8 @@ router.post('/submit', async(req,res)=>{
         return res.status(400).json({error : "Invalid Recaptcha token"});
     }
 
-    const project_key = `${process.env.RECAPTCHA_PROJECT_KEY}`;
-    const site_key = `${process.env.RECAPTCHA_SITE_KEY}`;
+    const project_key = process.env.RECAPTCHA_PROJECT_KEY;
+    const site_key = process.env.RECAPTCHA_SITE_KEY;
     const client = new RecaptchaEnterpriseServiceClient();
     const projectPath = client.projectPath(project_key);
     const request = ({
