@@ -13,14 +13,15 @@ const Form = require('../schemas/formSchema');
 
 router.get('/',(req,res)=>{
     res.send('Hello world from the server router');
-})
+  })
+  
+const projectID = process.env.RECAPTCHA_PROJECT_KEY;
+
 
 async function createAssessment(token) {
     const client = new RecaptchaEnterpriseServiceClient();
-    const projectID = process.env.RECAPTCHA_PROJECT_KEY;
     const recaptchaSiteKey = process.env.RECAPTCHA_SITE_KEY;
     const projectPath = client.projectPath(projectID);
-
     const request = ({
       assessment: {
         event: {
@@ -73,30 +74,17 @@ router.post('/submit', async (req,res)=>{
         } else if (data < 0.5) {
           return res.status(400).json({ error: "Failed to send the form, request invalid-user" });
         }
-      
-        // Send a success response if no errors occurred
-        return res.status(200).json({ success: true });
-      } catch (err) {
-        // Handle any other errors
-        return res.status(400).json({ error: err.message });
-      }
-
-    // if (!score) {
-    //     console.log("The CreateAssessment call failed because the token was: " +
-    //         response.tokenProperties.invalidReason);
-    //     return res.status(408).json({error : "Failed to send the form, request timeout-or-duplicate"});
-    // }
-
-    // if(score < 0.5){
-    //     
-    // }
-
+    } catch (err) {
+        return res.status(400).json({ error: err });
+    }
+    
     const form = new Form({name,email,message});
     form.save().then(()=>{
         return res.status(201).json({message : "Form sent successfully"});
     }).catch((err) =>{
         return res.status(500).json({error : "Failed to send the form"});
     })
+
 })
 
 module.exports = router;
