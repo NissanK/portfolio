@@ -56,7 +56,7 @@ async function createAssessment(token) {
     }
   }
 
-router.post('/submit', async (req,res)=>{
+router.post('/', async (req,res)=>{
     const {data,token} = req.body;
     const {name,email,message} = data;
     if(!name || !email || !message){

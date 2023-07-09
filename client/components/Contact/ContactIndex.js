@@ -49,7 +49,7 @@ function ContactIndex() {
     clickedSubmit();
 
     const {name,email,message} = userForm;
-    const res = await fetch("https://nissanportfolio2.onrender.com/submit",{
+    const res = await fetch("https://nissanportfolio2.onrender.com",{
       method : "POST",
       headers : {
         "Content-Type" : "application/json"
