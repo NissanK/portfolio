@@ -1,6 +1,8 @@
 import '../styles/globals.css'
 import { Ubuntu} from '@next/font/google'
 import { Analytics } from '@vercel/analytics/react';
+import { ReCaptchaProvider } from "next-recaptcha-v3";
+
 
 
 const ubuntu = Ubuntu({
@@ -11,9 +13,11 @@ const ubuntu = Ubuntu({
 
 export default function App({ Component, pageProps }) {
   return(
-    <main className={`${ubuntu.variable} font-sans`}>
-      <Component {...pageProps} />
-      <Analytics></Analytics>
-    </main>
+    <ReCaptchaProvider useEnterprise>
+      <main className={`${ubuntu.variable} font-sans`}>
+        <Component {...pageProps} />
+        <Analytics></Analytics>
+      </main>
+    </ReCaptchaProvider>
   )
 }
