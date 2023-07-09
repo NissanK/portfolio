@@ -3,6 +3,7 @@ import SectionHeading from "../Universal/SectionHeading";
 import emailjs from "@emailjs/browser";
 import { useReCaptcha } from "next-recaptcha-v3";
 
+
 function ContactIndex() {
   const formRef = useRef(null);
   const submitRef = useRef(null);
