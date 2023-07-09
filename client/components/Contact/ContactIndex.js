@@ -44,8 +44,10 @@ function ContactIndex() {
   const postData = async (e) => {
     e.preventDefault();
     const token = await executeRecaptcha("LOGIN"); // captcha token
+    console.log(token);
 
     clickedSubmit();
+
     const {name,email,message} = userForm;
     const res = await fetch("https://nissanportfolio2.onrender.com/submit",{
       method : "POST",
@@ -62,12 +64,10 @@ function ContactIndex() {
       )
     });
 
-    const data = await res.json();
-    console.log(data);
-    if(data.status === 422 || !data){
+    if(res.status === 422 || !data){
       window.alert("Invalid Data");
     }
-    else if(data.status === 400 || data.status === 408){
+    else if(res.status === 400 || res.status === 408){
       window.alert(data.error);
     }
     else{
