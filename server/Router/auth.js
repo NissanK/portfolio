@@ -15,11 +15,49 @@ router.get('/',(req,res)=>{
     res.send('Hello world from the server router');
 })
 
+async function createAssessment(token) {
+    const client = new RecaptchaEnterpriseServiceClient();
+    const projectID = process.env.RECAPTCHA_PROJECT_KEY;
+    const recaptchaSiteKey = process.env.RECAPTCHA_SITE_KEY;
+    const projectPath = client.projectPath(projectID);
+
+    const request = ({
+      assessment: {
+        event: {
+          token: token,
+          siteKey: recaptchaSiteKey,
+        },
+      },
+      parent: projectPath,
+    });
+
+    const [ response ] = await client.createAssessment(request);
+    if (!response.tokenProperties.valid) {
+        console.log("The CreateAssessment call failed because the token was: " +
+        response.tokenProperties.invalidReason);
+
+        return null;
+    }
+
+    if (response.tokenProperties.action === "LOGIN") {
+
+     console.log("The reCAPTCHA score is: " +
+       response.riskAnalysis.score);
+
+     response.riskAnalysis.reasons.forEach((reason) => {
+       console.log(reason);
+     });
+     return response.riskAnalysis.score;
+    } else {
+     console.log("The action attribute in your reCAPTCHA tag " +
+       "does not match the action you are expecting to score");
+     return null;
+    }
+  }
+
 router.post('/submit', async (req,res)=>{
     const {data,token} = req.body;
     const {name,email,message} = data;
-    // console.log(data);
-    // console.log(token);
     if(!name || !email || !message){
         return res.status(422).json({error : "Please fill all the fields"});
     }
@@ -27,29 +65,31 @@ router.post('/submit', async (req,res)=>{
         return res.status(400).json({error : "Invalid Recaptcha token"});
     }
 
-    const project_key = process.env.RECAPTCHA_PROJECT_KEY;
-    const site_key = process.env.RECAPTCHA_SITE_KEY;
-    const client = new RecaptchaEnterpriseServiceClient();
-    const projectPath = client.projectPath(project_key);
-    const request = ({
-        assessment: {
-            event: {
-            token: token,
-            siteKey: site_key,
-            },
-        },
-        parent: projectPath,
-    });
-    return res.status(400);
-    const [ response ] = await client.createAssessment(request);
-    if (!response.tokenProperties.valid) {
-        console.log("The CreateAssessment call failed because the token was: " +
-            response.tokenProperties.invalidReason);
-        return res.status(408).json({error : "Failed to send the form, request timeout-or-duplicate"});
-    }
-    if(response.riskAnalysis.score < 0.5){
-        return res.status(400).json({error : "Failed to send the form, request invalid-user"});
-    }
+    try {
+        const data = await createAssessment(token);
+      
+        if (!data) {
+          return res.status(408).json({ error: "Failed to send the form, request timeout-or-duplicate" });
+        } else if (data < 0.5) {
+          return res.status(400).json({ error: "Failed to send the form, request invalid-user" });
+        }
+      
+        // Send a success response if no errors occurred
+        return res.status(200).json({ success: true });
+      } catch (err) {
+        // Handle any other errors
+        return res.status(400).json({ error: err.message });
+      }
+
+    // if (!score) {
+    //     console.log("The CreateAssessment call failed because the token was: " +
+    //         response.tokenProperties.invalidReason);
+    //     return res.status(408).json({error : "Failed to send the form, request timeout-or-duplicate"});
+    // }
+
+    // if(score < 0.5){
+    //     
+    // }
 
     const form = new Form({name,email,message});
     form.save().then(()=>{
