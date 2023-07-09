@@ -1,11 +1,11 @@
 const { application } = require('express');
 const express = require('express');
 const router = express.Router();
+
 const {RecaptchaEnterpriseServiceClient} =
 require('@google-cloud/recaptcha-enterprise');
 
 require('dotenv').config();
-
 
 
 require('../db/connection');
@@ -18,6 +18,8 @@ router.get('/',(req,res)=>{
 router.post('/submit', async (req,res)=>{
     const {data,token} = req.body;
     const {name,email,message} = data;
+    // console.log(data);
+    // console.log(token);
     if(!name || !email || !message){
         return res.status(422).json({error : "Please fill all the fields"});
     }
