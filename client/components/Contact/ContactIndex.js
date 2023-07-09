@@ -45,7 +45,6 @@ function ContactIndex() {
   const postData = async (e) => {
     e.preventDefault();
     const token = await executeRecaptcha("LOGIN"); // captcha token
-    console.log(token);
 
     clickedSubmit();
 
@@ -65,7 +64,8 @@ function ContactIndex() {
       )
     });
 
-    if(res.status === 422 || !data){
+    console.log(res);
+    if(res.status === 422 || !res){
       window.alert("Invalid Data");
     }
     else if(res.status === 400 || res.status === 408){
