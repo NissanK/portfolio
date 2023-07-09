@@ -67,23 +67,25 @@ router.post('/submit', async (req,res)=>{
     }
 
     try {
-        const data = await createAssessment(token);
-      
-        if (!data) {
-          return res.status(408).json({ error: "Failed to send the form, request timeout-or-duplicate" });
-        } else if (data < 0.5) {
-          return res.status(400).json({ error: "Failed to send the form, request invalid-user" });
-        }
+      const data = await createAssessment(token);
+    
+      if (!data) {
+        return res.status(408).json({ error: "Failed to send the form, request timeout-or-duplicate" });
+      } else if (data < 0.5) {
+        return res.status(400).json({ error: "Failed to send the form, request invalid-user" });
+      }
+
+      const form = new Form({name,email,message});
+      form.save().then(()=>{
+          return res.status(201).json({message : "Form sent successfully"});
+      }).catch((err) =>{
+          return res.status(500).json({error : "Failed to send the form"});
+      })
+
     } catch (err) {
-        return res.status(400).json({ error: err });
+      return res.status(500).json({ error: "Internal server error" });
     }
     
-    const form = new Form({name,email,message});
-    form.save().then(()=>{
-        return res.status(201).json({message : "Form sent successfully"});
-    }).catch((err) =>{
-        return res.status(500).json({error : "Failed to send the form"});
-    })
 
 })
 
