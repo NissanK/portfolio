@@ -51,9 +51,9 @@ router.post('/submit', async (req,res)=>{
 
     const form = new Form({name,email,message});
     form.save().then(()=>{
-        res.status(201).json({message : "Form sent successfully"});
+        return res.status(201).json({message : "Form sent successfully"});
     }).catch((err) =>{
-        res.status(500).json({error : "Failed to send the form"});
+        return res.status(500).json({error : "Failed to send the form"});
     })
 })
 
