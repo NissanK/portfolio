@@ -11,7 +11,7 @@ const ubuntu = Ubuntu({
 
 export default function App({ Component, pageProps }) {
   return(
-    <ReCaptchaProvider useEnterprise={true} reCaptchaKey={`${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}>
+    <ReCaptchaProvider reCaptchaKey={`${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}>
       <main className={`${ubuntu.variable} font-sans`}>
         <Component {...pageProps} />
         <Analytics></Analytics>

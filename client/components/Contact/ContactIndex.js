@@ -44,9 +44,8 @@ function ContactIndex() {
 
   const postData = async (e) => {
     e.preventDefault();
-    const token = await executeRecaptcha("LOGIN"); // captcha token
-
     clickedSubmit();
+    const token = await executeRecaptcha("LOGIN"); // captcha token
 
     const {name,email,message} = userForm;
     const res = await fetch("https://nissanportfolio2.onrender.com",{
@@ -64,12 +63,14 @@ function ContactIndex() {
       )
     });
 
-    console.log(res);
     if(res.status === 422 || !res){
       window.alert("Invalid Data");
     }
     else if(res.status === 400 || res.status === 408){
       window.alert("Could not submit form!");
+    }
+    else if(res.status == 500){
+      window.alert('failed reCAPTCHA');
     }
     else{
       emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, formRef.current,process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
