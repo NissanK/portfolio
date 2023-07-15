@@ -1,6 +1,7 @@
 const { application } = require('express');
 const express = require('express');
 const router = express.Router();
+const fetch = require('node-fetch');
 
 const {RecaptchaEnterpriseServiceClient} =
 require('@google-cloud/recaptcha-enterprise');
@@ -15,46 +16,8 @@ router.get('/',(req,res)=>{
     res.send('Hello world from the server router');
   })
   
-const projectID = process.env.RECAPTCHA_PROJECT_KEY;
 
 
-async function createAssessment(token) {
-    const client = new RecaptchaEnterpriseServiceClient();
-    const recaptchaSiteKey = process.env.RECAPTCHA_SITE_KEY;
-    const projectPath = client.projectPath(projectID);
-    const request = ({
-      assessment: {
-        event: {
-          token: token,
-          siteKey: recaptchaSiteKey,
-        },
-      },
-      parent: projectPath,
-    });
-
-    const [ response ] = await client.createAssessment(request);
-    if (!response.tokenProperties.valid) {
-        console.log("The CreateAssessment call failed because the token was: " +
-        response.tokenProperties.invalidReason);
-
-        return null;
-    }
-
-    if (response.tokenProperties.action === "LOGIN") {
-
-     console.log("The reCAPTCHA score is: " +
-       response.riskAnalysis.score);
-
-     response.riskAnalysis.reasons.forEach((reason) => {
-       console.log(reason);
-     });
-     return response.riskAnalysis.score;
-    } else {
-     console.log("The action attribute in your reCAPTCHA tag " +
-       "does not match the action you are expecting to score");
-     return null;
-    }
-  }
 
 router.post('/', async (req,res)=>{
     const {data,token} = req.body;
@@ -66,27 +29,42 @@ router.post('/', async (req,res)=>{
         return res.status(400).json({error : "Invalid Recaptcha token"});
     }
 
-    try {
-      const data = await createAssessment(token);
-    
-      if (!data) {
-        return res.status(408).json({ error: "Failed to send the form, request timeout-or-duplicate" });
-      } else if (data < 0.5) {
-        return res.status(400).json({ error: "Failed to send the form, request invalid-user" });
-      }
+    const url = 'https://www.google.com/recaptcha/api/siteverify';
 
-      const form = new Form({name,email,message});
-      form.save().then(()=>{
-          return res.status(201).json({message : "Form sent successfully"});
-      }).catch((err) =>{
-          return res.status(500).json({error : "Failed to send the form"});
+    const payload = {
+      secret: process.env.RECAPTCHA_SECRET_KEY,
+      response: token
+    };
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams(payload).toString()
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          console.log('reCAPTCHA verification successful.');
+          if(data.score < 0.7){
+            return res.status(500).json({error : "Failed to send the form"});
+          }
+          const form = new Form({name,email,message});
+          form.save().then(()=>{
+              return res.status(201).json({message : "Form sent successfully"});
+          }).catch((err) =>{
+              return res.status(500).json({error : "Failed to send the form"});
+          })
+        } else {
+          console.log('reCAPTCHA verification failed.');
+          return res.status(500).json({error : "reCAPTCHA verification failed."});
+        }
       })
-
-    } catch (err) {
-      return res.status(500).json({ error: "Internal server error" });
-    }
-    
-
+      .catch(error => {
+        console.error('Error:', error);
+        return res.status(500).json({error : "reCAPTCHA verification failed, didn't get response."});
+      });
 })
 
 module.exports = router;

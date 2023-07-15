@@ -1,7 +1,6 @@
 
 const dotenv = require('dotenv');
 const express = require('express');
-const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
 
@@ -9,8 +8,6 @@ app.use(cors({ origin: '*' }));
 
 dotenv.config({path: './config.env'});
 require('./db/connection')
-
-const User = require('./schemas/formSchema');
 
 app.use(express.json());
 
