@@ -52,7 +52,7 @@ function SkillsIndex() {
           height="33px"
           cssClasses={"inline"}
           width="33px"
-        /> Specialist on {" "}
+        /> Expert on {" "}
         <a
           href="https://codeforces.com/profile/NissanK"
           target={"_blank"} rel="noreferrer"
@@ -69,7 +69,7 @@ function SkillsIndex() {
           height="33px"
           cssClasses={"inline"}
           width="33px"
-        /> Solved over 400+ questions on {" "}
+        /> Solved over 550+ questions on {" "}
         <a
           href="https://leetcode.com/nissankumar/"
           target={"_blank"} rel="noreferrer"

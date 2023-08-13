@@ -39,7 +39,6 @@ function ContactIndex() {
       clearInterval(setTimer);
       setTimerTime(60);
     }, 60000);
-
   }
 
   const postData = async (e) => {
