@@ -19,7 +19,7 @@ const projects = [
       "Implemented a live visualization of the classic DSA problem Rat In a Maze, dynamically generating output based on user input.",
     tools: ["React.js", "CSS3", "DSA", "Netlify"],
     github: "https://github.com/NissanK/Rat_In_A_Maze_Visualization",
-    link: "https://funny-malabi-8c3e4e.netlify.app/",
+    link: "https://nissank.github.io/Rat_In_A_Maze_Visualization/",
   },
 ];
 
