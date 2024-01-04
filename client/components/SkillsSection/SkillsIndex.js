@@ -77,7 +77,7 @@ function SkillsIndex() {
         >
           Leetcode
         </a>{" "}
-        with verying difficulty
+        with varying difficulty
       </div>
     </section>
   );
