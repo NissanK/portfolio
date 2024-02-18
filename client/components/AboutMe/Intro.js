@@ -9,11 +9,11 @@ function Intro() {
     <section className="my-10 md:my-16 scroll-mt-[80px]" id="about">
       <SectionHeading heading="About Me"></SectionHeading>
 
-      <div className="flex flex-col md:flex-row justify-center items-center my-6 md:my-10">
-        <IntroImage></IntroImage>
+      <div className="flex flex-col md:flex-row justify-center items-center my-6 md:my-10 mx-[5%] md:mx-[10%]">
+        {/* <IntroImage></IntroImage> */}
 
-        <div className="md:w-1/2 mx-10" data-aos="fade-up" data-aos-once='true' data-aos-duration='500'>
-          <h1 className="text-light-slate text-2xl md:text-3xl my-1">I&apos;m a 19 year old  developer from <span className="text-[#7cfcdf]">India</span>.</h1>
+        <div className="mx-10 flex justify-center flex-col" data-aos="fade-up" data-aos-once='true' data-aos-duration='500'>
+          <h1 className="text-light-slate text-2xl md:text-3xl my-1">I&apos;m a 20 year old  developer from <span className="text-[#7cfcdf]">India</span>.</h1>
 
           <h1 className="text-light-slate text-lg md:text-xl my-3">Currently pursuing my <span className="text-highlight">B.Tech</span> in <span className="text-highlight">Mathematics and Computing</span> from <span className="text-highlight"> Delhi Technological University</span></h1>
 

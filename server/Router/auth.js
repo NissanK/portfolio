@@ -13,8 +13,8 @@ require('../db/connection');
 const Form = require('../schemas/formSchema');
 
 router.get('/',(req,res)=>{
-    res.send('Hello world from the server router');
-  })
+  res.send('Hello world from the server router');
+})
 
 router.post('/', async (req,res)=>{
     const {data,token} = req.body;
