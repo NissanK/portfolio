@@ -28,7 +28,7 @@ function CodingProfilesIndex() {
         <div className="flex my-6 md:my-10 mx-[10%] flex-col" data-aos="fade-up" data-aos-once='true' data-aos-duration='500'>
             <div className="flex justify-start items-center mb-4 lg:text-2xl text-xl text-light-slate">
               Codeforces
-              <a href="https://leetcode.com/nissankumar/" target={"_blank"} rel="noreferrer">
+              <a href="https://codeforces.com/profile/NissanK" target={"_blank"} rel="noreferrer">
                 <GoLinkExternal className="lg:text-2xl text-xl hover:text-highlight transition-all text-light-slate ml-2"></GoLinkExternal>
               </a>
             </div>
