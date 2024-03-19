@@ -41,7 +41,7 @@ function LeetcodeRating() {
             </div>
 
             <div className='flex items-center'>
-                <img src={`/images/leetcode-${loading === false ? data.contestBadges.name : null}-badge.gif`} className='w-14 h-14 mr-2'></img>
+                <img src={`/images/${loading === false ? data.contestBadges.name : null}-badge.gif`} className='w-14 h-14 mr-2'></img>
                 <div className='flex flex-col'>
                     <div>Level</div>
                     <div className='text-2xl md:text-3xl'>{loading === false ? data.contestBadges.name : "Loading"}</div>
