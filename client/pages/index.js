@@ -11,6 +11,7 @@ import NavbarMobile from '../components/Navbar/NavbarMobile';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'
+import CodingProfilesIndex from '../components/CodingProfiles/CodingProfilesIndex';
 
 export default function Home() {
 
@@ -37,6 +38,7 @@ export default function Home() {
       <HomeSection></HomeSection>
       <Intro></Intro>
       <SkillsIndex></SkillsIndex>
+      <CodingProfilesIndex></CodingProfilesIndex>
       <ProjectsIndex></ProjectsIndex>
       <ContactIndex></ContactIndex>
       <Footer></Footer>

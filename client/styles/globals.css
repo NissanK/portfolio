@@ -18,7 +18,7 @@ body{
 
 .wrapper span{
     position: fixed;
-    top: -120px;
+    top: 0;
     height: 6px;
     z-index: 0;
     width: 6px;

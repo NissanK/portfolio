@@ -18,7 +18,8 @@ const skills = [
   { name: "HTML5" },
   { name: "Git/Github" },
   { name: "MySQL" },
-  { name: "MongoDB" }
+  { name: "MongoDB" },
+  { name: "Docker" }
 ];
 
 let skillElements = [];
@@ -44,7 +45,7 @@ function SkillsIndex() {
         {skillElements}
       </div>
 
-      <div className="text-light-slate text-lg md:text-xl mt-2 mb-2 md:mb-2 mx-[10%]"
+      {/* <div className="text-light-slate text-lg md:text-xl mt-2 mb-2 md:mb-2 mx-[10%]"
         data-aos="fade-up" data-aos-once='true' data-aos-duration='500' data-aos-delay='1400'
       >
         <ReturnUpForwardOutline
@@ -78,7 +79,7 @@ function SkillsIndex() {
           Leetcode
         </a>{" "}
         with varying difficulty
-      </div>
+      </div> */}
     </section>
   );
 }

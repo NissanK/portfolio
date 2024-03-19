@@ -93,7 +93,7 @@ function NavbarMobile() {
         <div
             ref={menuRef}
             className="w-[350px] h-[350px] bg-navbar-blue absolute pointer-events-none opacity-0
-                top-0 right-0 rounded-bl-full
+                top-0 right-0 rounded-bl-full 
                 transition-all ease-in duration-500"
         >
             <ul className=" pt-[4.5rem]">
@@ -101,6 +101,7 @@ function NavbarMobile() {
             <NavbarLinkBMedium nameID="#home" name="Home"></NavbarLinkBMedium>
             <NavbarLinkBMedium nameID="#about" name="About"></NavbarLinkBMedium>
             <NavbarLinkBMedium nameID="#skills" name="Skills"></NavbarLinkBMedium>
+            <NavbarLinkBMedium nameID="#codingProfiles" name="Coding Profiles"></NavbarLinkBMedium>
             <NavbarLinkBMedium nameID="#projects" name="Projects"></NavbarLinkBMedium>
             <NavbarLinkBMedium nameID="#contact" name="Contact"></NavbarLinkBMedium>
             

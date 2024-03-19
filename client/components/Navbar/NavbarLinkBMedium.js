@@ -24,7 +24,7 @@ function NavbarLinkBMedium(props) {
     <li className="my-2 ml-[50%] flex justify-center mr-[22%]">
         <a  ref={linkRef}
             href={props.nameID}
-            className="cursor-pointer bold text-md hover-underline-animation text-lightest-slate"
+            className="cursor-pointer bold text-md text-center hover-underline-animation text-lightest-slate"
         >
             {props.name}
         </a>

@@ -17,6 +17,7 @@ module.exports = {
         'dark-slate' : '#83b3c9',
         'navbar-dark-green' : '#233f4f',
         'global-bg' : '#0a3c5e',
+        'light-global-bg' : '#12659c',
         'highlight' : '#7cfcdf',
         'error' : '#ff3333',
         'bright-blue' : '#0096FF'
