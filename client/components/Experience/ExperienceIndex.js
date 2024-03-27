@@ -35,7 +35,7 @@ function ExperienceIndex() {
                         <div className={`flex md:flex-row flex-col-reverse cursor-pointer active:bg-light-slate/40
                         ${exp.expId === currentRole ? 'text-highlight bg-light-slate/[0.05]' :
                          'bg-light-slate/[0.05] text-light-slate'} transition-all delay-100 duration-200`} 
-                        onClick={() => setCurrentRole(exp.expId)}>
+                        onClick={() => setCurrentRole(exp.expId)} key={exp.expId}>
 
                             <div className='md:w-1 md:h-auto w-32 h-1 justify-self-end bg-lightest-slate/20'></div>
                             <div className='p-2 text-sm text-center w-32 md:w-full'>{exp.company}</div>
@@ -70,17 +70,10 @@ function ExperienceIndex() {
                 <div>
 
                 </div>
-                {/* <a
-                    href="#"
-                    target={"_blank"} rel="noreferrer"
-                    className="sm:w-8 sm:h-8 h-4 w-4 rounded cursor-pointer
-                        flex justify-center items-center transition-all "
-                >
-                </a> */}
 
                 {
-                    ExperienceList[currentRole].keypoints.map((point) => (
-                        <div className='flex'>
+                    ExperienceList[currentRole].keypoints.map((point,index) => (
+                        <div key={index} className='flex'> 
                             <CaretForwardOutline
                                 color={"#7cfcdf"}
                                 title="pointer"

@@ -10,8 +10,8 @@ function AchievementsIndex() {
         <SectionHeading heading="Achievements"/>
         <div className='flex flex-col my-6 md:my-10 mx-[10%] gap-3'>
             {
-                AchievementsList.map( (achievement) => (
-                    <div className='text-lightest-slate flex flex-row'>
+                AchievementsList.map( (achievement,index) => (
+                    <div  key={index} className='text-lightest-slate flex flex-row'>
                         <CaretForwardOutline
                             color={"#7cfcdf"}
                             title="pointer"
