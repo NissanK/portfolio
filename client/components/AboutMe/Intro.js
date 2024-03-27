@@ -1,13 +1,13 @@
 import { React} from "react";
-import IntroImage from "./IntroImage";
 import { LogoGithub, LogoInstagram, LogoLinkedin } from "react-ionicons";
 import SectionHeading from "../Universal/SectionHeading";
+// import IntroImage from "./IntroImage";
 
 function Intro() {
 
   return (
     <section className="my-10 md:my-16 scroll-mt-[80px]" id="about">
-      <SectionHeading heading="About Me"></SectionHeading>
+      <SectionHeading heading="About Me"/>
 
       <div className="flex flex-col md:flex-row justify-center items-center my-6 md:my-10 mx-[5%] md:mx-[10%]">
         {/* <IntroImage></IntroImage> */}

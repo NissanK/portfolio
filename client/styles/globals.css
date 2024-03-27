@@ -17,20 +17,16 @@ body{
 /* background animation  */
 
 .wrapper span{
-    position: fixed;
-    top: 0;
-    height: 6px;
-    z-index: 0;
-    width: 6px;
     animation: animate 10s linear infinite;
-    border-radius: 2px;
 }
+
 
 .wrapper span:nth-child(1){
     left: 60px;
     animation-delay:0.2s;
     background: #3c94f3;
 }
+
 .wrapper span:nth-child(2){
     left: 60%;
     animation-delay: 2s;
@@ -90,12 +86,12 @@ body{
 .wrapper span:nth-child(12){
     right: 8%;
     animation-delay: 6s;
-    background: #1d9ec2;    
+    background: #1d9ec2;
 }
 .wrapper span:nth-child(13){
     right: 50%;
     animation-delay: 3.5s;
-    background: #64b7da;    
+    background: #64b7da;
 }
 
 @keyframes animate{
@@ -119,11 +115,12 @@ html::-webkit-scrollbar{
 }
 
 html::-webkit-scrollbar-thumb{
-    background-color: #83b3c9;
+    background-color: #a6d7f8;
     border-radius: 2px;
 }
+
 html::-webkit-scrollbar-track{
-    background-color: #0a3c5e;
+    background-color: #1B262C;
 }
 
 /* global background color - #0a3c5e  */
@@ -132,7 +129,7 @@ html::-webkit-scrollbar-track{
     display: inline-block;
     position: relative;
 }
-  
+
 .hover-underline-animation::after {
     content: '';
     position: absolute;
@@ -145,7 +142,7 @@ html::-webkit-scrollbar-track{
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
-  
+
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -160,7 +157,7 @@ html::-webkit-scrollbar-track{
     display: inline-block;
     position: relative;
 }
-  
+
 .hover-underline-animation-highlight::after {
     content: '';
     position: absolute;
@@ -173,7 +170,7 @@ html::-webkit-scrollbar-track{
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
-  
+
 .hover-underline-animation-highlight:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;

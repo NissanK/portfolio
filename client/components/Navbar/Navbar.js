@@ -17,9 +17,13 @@ export default function Navbar() {
   }
   const mouseLeaveHandler = () =>{
     if(isNavbarOpen === true && scrollY !== 0){
-      setIsNavbarOpen(false);
+      setTimeout(() => {
+        setIsNavbarOpen(false);
+      }, 350);
     }
-    setMouseNavbar(false);
+    setTimeout(() => {
+      setIsNavbarOpen(false);
+    }, 350);
   }
 
   useEffect(() => {
@@ -60,10 +64,11 @@ export default function Navbar() {
         
       <NavbarLinkGMedium nameID="#home" name='Home' aosdelay = '0'></NavbarLinkGMedium>
       <NavbarLinkGMedium nameID="#about" name='About' aosdelay = '100'></NavbarLinkGMedium>
-      <NavbarLinkGMedium nameID="#skills" name='Skills' aosdelay = '200'></NavbarLinkGMedium>
-      <NavbarLinkGMedium nameID="#codingProfiles" name='Coding Profiles' aosdelay = '300'></NavbarLinkGMedium>
-      <NavbarLinkGMedium nameID="#projects" name='Projects' aosdelay = '400'></NavbarLinkGMedium>
-      <NavbarLinkGMedium nameID="#contact" name='Contact' aosdelay = '500'></NavbarLinkGMedium>
+      <NavbarLinkGMedium nameID="#experience" name='Experience' aosdelay = '200'></NavbarLinkGMedium>
+      <NavbarLinkGMedium nameID="#skills" name='Skills' aosdelay = '300'></NavbarLinkGMedium>
+      <NavbarLinkGMedium nameID="#achievements" name='Achievements' aosdelay = '400'></NavbarLinkGMedium>
+      <NavbarLinkGMedium nameID="#projects" name='Projects' aosdelay = '500'></NavbarLinkGMedium>
+      <NavbarLinkGMedium nameID="#contact" name='Contact' aosdelay = '600'></NavbarLinkGMedium>
         
       </ul> : null}
 

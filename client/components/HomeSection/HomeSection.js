@@ -1,7 +1,11 @@
-import React,{useRef,useEffect} from "react";
+import React,{useRef,useEffect,useState} from "react";
+import Particle from "../Universal/Particle";
 
 function Home() {
   const linkRef = useRef(null);
+  const wrapperRef = useRef(null);
+
+  const [particleArray, setParticleArray] = useState([]);
 
   useEffect(() => {
     function anchorSmoothScroll(e){
@@ -17,23 +21,20 @@ function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    let newParticleArray = [];
+    for(let i = 0;i<13;i++){
+      newParticleArray.push(<Particle key={i}></Particle>);
+    }
+
+    setParticleArray(newParticleArray);
+  }, [])
+
   return (
-    <section className="flex mx-auto h-[90vh] w-4/5 flex-col justify-center wrapper md:pt-[80px]">
+    <section className="flex mx-auto h-[90vh] w-4/5 flex-col justify-center wrapper md:pt-[80px]" ref={wrapperRef}>
+
       {/* background animation spans check global css */}
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+      {particleArray}
 
       <h1 className="text-[#c3d9e3] my-3 text-md"
       data-aos="fade-up" data-aos-once='true' data-aos-duration='500' data-aos-delay='1000'>Hi I am,</h1>
@@ -59,7 +60,7 @@ function Home() {
       >
         View My Projects
       </a>
-      
+
     </section>
   );
 }

@@ -28,14 +28,13 @@ function Leetcode() {
       
     useEffect(() => {
       if(loading === false){
-        console.log(data);
         const ratioTotal = (data.totalSolved/data.totalQuestions)*360;
-        LeetcodeCircleRef.current.style.backgroundImage = `linear-gradient(${90 + ratioTotal}deg, transparent 50%, #0a3c5e 50%), linear-gradient(90deg, #0a3c5e 50%, transparent 50%)`;
+        LeetcodeCircleRef.current.style.backgroundImage = `linear-gradient(${90 + ratioTotal}deg, transparent 50%, #0a192f 50%), linear-gradient(90deg, #0a192f 50%, transparent 50%)`;
       }
     }, [loading])
 
   return (
-    <div className='flex lg:w-[45%] md:w-[48%]  bg-light-slate/20 h-40 md:h-48 justify-around items-center rounded-lg md:mb-0 mb-4'>
+    <div className='flex lg:w-[45%] md:w-[48%]  bg-light-slate/[0.05] text-lightest-slate h-40 md:h-48 justify-around items-center rounded-lg md:mb-0 mb-4'>
         <div className='rounded-full lg:h-[7.5rem] lg:w-[7.5rem] md:w-[5.5rem] md:h-[5.5rem] h-[6.5rem] w-[6.5rem] bg-light-slate
         flex items-center justify-center ' ref={LeetcodeCircleRef}>
             <div className='rounded-full lg:h-[7rem] lg:w-[7rem] md:w-[5rem] md:h-[5rem] h-[6rem] w-[6rem] bg-light-global-bg text-light-slate flex flex-col justify-center items-center'>
@@ -43,6 +42,7 @@ function Leetcode() {
                 <div>Solved</div>
             </div>
         </div>
+
         {loading === false ?
           <div className='flex flex-col justify-center items-center'>
               <LeetcodeQuestionType type={"Easy"} totalSolved={data.easySolved} totalQuestions={data.totalEasy}></LeetcodeQuestionType>

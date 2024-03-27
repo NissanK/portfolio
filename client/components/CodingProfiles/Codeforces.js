@@ -31,14 +31,8 @@ function Codeforces() {
         fetchData();
     }, [])
 
-    useEffect(() => {
-        if(loading === false){
-            console.log(data);
-        }
-    }, [loading])
-
   return (
-    <div className='flex lg:w-[45%] md:w-[48%] w-full bg-light-slate/20 h-40 md:h-48 justify-around  rounded-lg flex-col'>
+    <div className='flex lg:w-[45%] md:w-[48%] w-full bg-light-slate/[0.05] text-lightest-slate h-40 md:h-48 justify-around  rounded-lg flex-col'>
         
         <div className='flex justify-around'>
             <div className='flex flex-col'>

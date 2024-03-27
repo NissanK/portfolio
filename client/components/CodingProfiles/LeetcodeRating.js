@@ -20,18 +20,11 @@ function LeetcodeRating() {
             console.error('Error fetching data:', error);
         }
         };
-
         fetchData();
     }, [])
 
-    useEffect(() => {
-        if(loading === false){
-            console.log(data);
-        }
-    }, [loading])
-
   return (
-    <div className='flex lg:w-[45%] md:w-[48%] bg-light-slate/20 h-40 md:h-48 justify-around  rounded-lg flex-col'>
+    <div className='flex lg:w-[45%] md:w-[48%] bg-light-slate/[0.05] text-lightest-slate h-40 md:h-48 justify-around  rounded-lg flex-col'>
         
         <div className='flex justify-around'>
 
@@ -52,7 +45,8 @@ function LeetcodeRating() {
         <div className='flex justify-around'>
             <div className='flex flex-col'>
                 <div>Global Ranking</div>
-                <div className='text-2xl md:text-3xl'>{loading === false ? data.contestGlobalRanking : "Loading"} <span className='text-xs md:text-sm'>/{ loading === false ? data.totalParticipants :"Loading"}</span></div>
+                <div className='text-2xl md:text-3xl'>{loading === false ? data.contestGlobalRanking : "Loading"}
+                <span className='text-xs md:text-sm'>/{ loading === false ? data.totalParticipants :"Loading"}</span></div>
             </div>
 
             <div className='flex flex-col'>

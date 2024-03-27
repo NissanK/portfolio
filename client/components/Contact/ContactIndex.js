@@ -94,7 +94,7 @@ function ContactIndex() {
       </div>
 
       <div className="flex justify-center mt-9">
-        <form method="POST" className="w-4/5 sm:w-[70%] md:w-3/5 bg-blue-slate/50 rounded p-6 md:p-8 drop-shadow-xl"
+        <form method="POST" className="w-4/5 sm:w-[70%] md:w-3/5 bg-light-slate/[0.15] text-light-slate rounded p-6 md:p-8 drop-shadow-xl"
         onSubmit={postData} ref={formRef}
         data-aos="fade-up" data-aos-once='true' data-aos-duration='500'
         >
@@ -108,7 +108,7 @@ function ContactIndex() {
               value={userForm.name}
               required
               onChange={handleInputs}
-              className="block bg-white/40 rounded p-2 w-full my-1 text-navbar-blue/80
+              className="block bg-light-slate/20 rounded p-2 w-full my-1 text-lightest-slate
               focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg
               text-sm placeholder-lightest-slate"
             ></input>
@@ -123,7 +123,7 @@ function ContactIndex() {
               value={userForm.email}
               required
               onChange={handleInputs}
-              className="block bg-white/40 rounded p-2 w-full my-1 text-navbar-blue/80
+              className="block bg-light-slate/20  rounded p-2 w-full my-1 text-lightest-slate
               focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg
               text-sm placeholder-lightest-slate"
             ></input>
@@ -137,14 +137,14 @@ function ContactIndex() {
               placeholder="Type your message here" name="message"
               value={userForm.message} required
               onChange={handleInputs}
-              className="block bg-white/40 rounded p-2  my-1 text-navbar-blue/80 w-full !h-[100px] md:!h-[150px]
+              className="block bg-light-slate/20 rounded p-2  my-1 text-lightest-slate w-full !h-[100px] md:!h-[150px]
               focus:outline-none  focus:border-global-bg focus:ring-1 focus:ring-global-bg resize-none
               text-sm placeholder-lightest-slate"
             ></textarea>
           </label> 
 
           <button type="submit" value="Submit" ref={submitRef}
-            className="text-sm md:text-md text-navbar-dark-green bg-[#c8e6fa]/50 w-[9rem] md:w-[12rem] mt-6
+            className="text-sm md:text-md text-navbar-dark-green bg-[#c8e6fa]/80 w-[9rem] md:w-[12rem] mt-6
             px-4 rounded border-[0.5px] ring-[0.5px] ring-navbar-dark-green border-navbar-dark-green py-1 flex justify-center
             transition-all hover:bg-highlight mx-auto disabled:bg-zinc-300 disabled:text-zinc-500 disabled:border-zinc-500"
           >Submit

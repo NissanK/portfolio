@@ -100,12 +100,13 @@ function NavbarMobile() {
 
             <NavbarLinkBMedium nameID="#home" name="Home"></NavbarLinkBMedium>
             <NavbarLinkBMedium nameID="#about" name="About"></NavbarLinkBMedium>
+            <NavbarLinkBMedium nameID="#experience" name="Experience"></NavbarLinkBMedium>
             <NavbarLinkBMedium nameID="#skills" name="Skills"></NavbarLinkBMedium>
-            <NavbarLinkBMedium nameID="#codingProfiles" name="Coding Profiles"></NavbarLinkBMedium>
+            <NavbarLinkBMedium nameID="#achievements" name="Achievements"></NavbarLinkBMedium>
             <NavbarLinkBMedium nameID="#projects" name="Projects"></NavbarLinkBMedium>
             <NavbarLinkBMedium nameID="#contact" name="Contact"></NavbarLinkBMedium>
             
-            {/* <a href="https://drive.google.com/drive/folders/1A8sCuddeEbW5695GYlLzUiraKhrw9_30?usp=sharing"
+            {/* <a href="#"
             target={"_blank"} rel="noreferrer"
                 className="bold text-md text-global-bg bg-lightest-slate 
                         px-6 rounded border-2 border-navbar-dark-green 

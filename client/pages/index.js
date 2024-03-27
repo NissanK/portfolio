@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React,{useEffect,useRef} from 'react';
 import Navbar from "../components/Navbar/Navbar"; 
 import Intro from '../components/AboutMe/Intro';
 import HomeSection from '../components/HomeSection/HomeSection';
@@ -12,32 +12,25 @@ import NavbarMobile from '../components/Navbar/NavbarMobile';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import CodingProfilesIndex from '../components/CodingProfiles/CodingProfilesIndex';
+import ExperienceIndex from '../components/Experience/ExperienceIndex';
+import AchievementsIndex from '../components/Achievements/AchievementsIndex';
 
 export default function Home() {
 
   useEffect(() => {
     AOS.init();
   }, [])
-  
 
   return (
-    <div className='bg-gradient-to-r from-[#0e5b8f] to-global-bg' id='home'>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+    <div className='bg-gradient-to-r from-light-global-bg to-global-bg' id='home'>
       <Navbar></Navbar>
       <NavbarMobile></NavbarMobile>
       <Link></Link>
       <HomeSection></HomeSection>
       <Intro></Intro>
+      <ExperienceIndex></ExperienceIndex>
       <SkillsIndex></SkillsIndex>
+      <AchievementsIndex></AchievementsIndex>
       <CodingProfilesIndex></CodingProfilesIndex>
       <ProjectsIndex></ProjectsIndex>
       <ContactIndex></ContactIndex>

@@ -15,9 +15,13 @@ function Link() {
   }
   const mouseLeaveHandler = () =>{
     if(isNavbarOpen === true && scrollY !== 0){
-      setIsNavbarOpen(false);
+      setTimeout(() => {
+        setIsNavbarOpen(false);
+      }, 350);
     }
-    setMouseNavbar(false);
+    setTimeout(() => {
+      setIsNavbarOpen(false);
+    }, 350);
   }
 
   useEffect(() => {
