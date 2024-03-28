@@ -17,9 +17,7 @@ export default function Navbar() {
   }
   const mouseLeaveHandler = () =>{
     if(isNavbarOpen === true && scrollY !== 0){
-      setTimeout(() => {
-        setIsNavbarOpen(false);
-      }, 350);
+      setIsNavbarOpen(false);
     }
     setIsNavbarOpen(false);
   }
