@@ -12,6 +12,7 @@
     "@emailjs/browser": "^3.10.0",
     "@next/font": "^13.1.1",
     "@vercel/analytics": "^0.1.8",
+    "dotenv": "^16.4.5",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.1",
     "next": "13.1.1",

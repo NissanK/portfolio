@@ -19,7 +19,8 @@ function ExperienceIndex() {
   return (
     <section className="my-10 md:my-16 scroll-mt-[80px]" id='experience'>
         <SectionHeading heading='Experience'/>
-        <div className="flex md:flex-row flex-col my-6 md:my-10 mx-[5%] md:mx-[10%] items-center md:items-baseline justify-center">
+        <div className="flex md:flex-row flex-col my-6 md:my-10 mx-[5%] md:mx-[10%] items-center md:items-baseline justify-center"
+        data-aos="fade-up" data-aos-once='true' data-aos-duration='500'>
 
             <div className='md:w-36 w-fit h-fit flex md:flex-col flex-row md:ml-0 md:mr-10 md:mb-0 mb-4 items-end md:items-stretch'>
 

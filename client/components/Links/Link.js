@@ -13,15 +13,14 @@ function Link() {
     }
     setMouseNavbar(true);
   }
+
   const mouseLeaveHandler = () =>{
     if(isNavbarOpen === true && scrollY !== 0){
       setTimeout(() => {
         setIsNavbarOpen(false);
       }, 350);
     }
-    setTimeout(() => {
-      setIsNavbarOpen(false);
-    }, 350);
+    setIsNavbarOpen(false);
   }
 
   useEffect(() => {
@@ -48,8 +47,8 @@ function Link() {
   return (
     <div className=" top-[50%] -translate-y-[50%] float-left hidden md:sticky md:block">
     <div
-      className={isNavbarOpen? "transition-all w-14 top-[50%] -translate-y-[50%]  float-left  bg-navbar-blue p-1 rounded-tr rounded-br hidden md:absolute md:block" :
-       "w-4 h-[9.5rem] top-[50%] transition-all -translate-y-[50%] cursor-pointer  float-left bg-navbar-blue rounded-tr rounded-br hidden md:absolute md:block opacity-30"}
+      className={isNavbarOpen? "transition-all duration-300 w-14 top-[50%] -translate-y-[50%]  float-left  bg-navbar-blue p-1 rounded-tr rounded-br hidden md:absolute md:block" :
+       "w-4 h-[9.5rem] top-[50%] transition-all duration-300 -translate-y-[50%] cursor-pointer  float-left bg-light-slate/20 rounded-tr rounded-br hidden md:absolute md:block"}
       // data-aos="fade-right" data-aos-once='true' data-aos-duration='500' data-aos-delay='1800' 
       onClick={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}
     >

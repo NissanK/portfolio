@@ -14,6 +14,7 @@ import 'aos/dist/aos.css'
 import CodingProfilesIndex from '../components/CodingProfiles/CodingProfilesIndex';
 import ExperienceIndex from '../components/Experience/ExperienceIndex';
 import AchievementsIndex from '../components/Achievements/AchievementsIndex';
+import CodeforcesProblemsList from '../components/CodingProfiles/CodeforcesProblemsList';
 
 export default function Home() {
 

@@ -4,6 +4,7 @@ import SectionHeading from '../Universal/SectionHeading';
 import LeetcodeRating from './LeetcodeRating';
 import { GoLinkExternal } from "react-icons/go";
 import Codeforces from './Codeforces';
+import CodeforcesProblemsList from './CodeforcesProblemsList';
 
 function CodingProfilesIndex() {
     return (
@@ -33,11 +34,12 @@ function CodingProfilesIndex() {
               </a>
             </div>
             
-            <div className='flex justify-between'>
+            <div className='flex justify-between md:flex-row flex-col'>
               <Codeforces></Codeforces>
+              <CodeforcesProblemsList></CodeforcesProblemsList>
             </div>
         </div>
-        
+
       </section>
     );
   }
