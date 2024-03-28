@@ -108,8 +108,8 @@ function CodeforcesProblemsList() {
         <div className='flex flex-col items-center justify-center w-full gap-2'>
             <div className='text-center'>Range of Problems Solved</div>
             <div className='flex-row flex flex-wrap w-full justify-center gap-2'>
-                {problemsArray.map(problemRange => (
-                    <div className=' w-[48%] text-center'>{problemRange.range} : {problemRange.count}</div>
+                {problemsArray.map((problemRange,index) => (
+                    <div key={index} className=' w-[48%] text-center'>{problemRange.range} : {problemRange.count}</div>
                 ))}
             </div>
         </div>
