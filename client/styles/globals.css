@@ -20,78 +20,77 @@ body{
     animation: animate 10s linear infinite;
 }
 
-
 .wrapper span:nth-child(1){
     left: 60px;
     animation-delay:0.2s;
-    background: #3c94f3;
+    background: #3c94f350;
 }
 
 .wrapper span:nth-child(2){
     left: 60%;
     animation-delay: 2s;
-    background: #1b7ce3;
+    background: #1b7ce350;
 }
 .wrapper span:nth-child(3){
     left: 20%;
     animation-delay: 1s;
-    background: #84bbf5;    
+    background: #84bbf550;    
 }
 .wrapper span:nth-child(4){
     left: 30%;
     animation-delay: 4s;
-    background: #4c8af5;
+    background: #4c8af550;
 }
 .wrapper span:nth-child(5){
     left: 40%;
-    background: #83cdf7;
+    background: #83cdf750;
 }
 .wrapper span:nth-child(6){
     left: 50%;
     animation-delay: 6s;
-    background: deepskyblue;
+    background: rgba(0, 191, 255, 0.50);
 }
 .wrapper span:nth-child(7){
     left: 60%;
     animation-delay: 4.8s;
-    background: #25aedb;
+    background: #25aedb50;
 }
 .wrapper span:nth-child(8){
     left: 70%;
     animation-delay: 7s;
-    background:  #1877b8;
+    background:  #1877b850;
 }
 .wrapper span:nth-child(9){
     left: 80%;
     animation-delay: 5s;
-    background: cyan;
+    background: rgba(0, 255, 255, 0.50);
 }
 .wrapper span:nth-child(10){
     left: 90%;
     animation-delay: 3s;
-    background:#54a9e3;    
+    background:#54a9e350;    
 }
 .wrapper span:nth-child(10){
     left: 15%;
     animation-delay: 3.2s;
-    background: #54a9e3;    
+    background: #54a9e350;    
 }
 
 .wrapper span:nth-child(11){
     right: 5%;
     animation-delay: 1s;
-    background: #49b8dd;    
+    background: #49b8dd50;    
 }
 
 .wrapper span:nth-child(12){
     right: 8%;
     animation-delay: 6s;
-    background: #1d9ec2;
+    background: #1d9ec250;
 }
 .wrapper span:nth-child(13){
     right: 50%;
     animation-delay: 3.5s;
-    background: #64b7da;
+    background: #64b7da50;
 }
 
 @keyframes animate{

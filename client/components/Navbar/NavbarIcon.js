@@ -15,7 +15,7 @@ function NavbarIcon() {
     }, [iconHover]);
 
   return (
-    <div className="flex items-center h-full px-4 sm:px-6 md:px-8" >
+    <div className="flex items-center h-full px-4 sm:px-6 md:px-8 z-20" >
 
         <img
           className="inline w-[3rem] mr-2 sm:hoverIconAnimation z-10"

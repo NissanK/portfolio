@@ -18,7 +18,6 @@ function CodeforcesProblemsList() {
 
     const problemRatingMap = new Map();
     const problemSet = new Set();
-    const verdictSet = new Set();
 
 
     useEffect(() => {
@@ -34,8 +33,6 @@ function CodeforcesProblemsList() {
 
         const timenow = Math.floor(Date.now()/1000);
         const stringSHA = `123456/user.status?apiKey=${apikey}&handle=nissank&time=${timenow}#${secretkey}`;
-        console.log(stringSHA);
-        console.log(timenow);
         const generatedSHA = generateSHA512(stringSHA);
 
         const fetchData = async () => {
@@ -61,7 +58,6 @@ function CodeforcesProblemsList() {
     useEffect(() => {
         if(data !== null){
             var sz = data.length;
-            console.log(sz);
 
             for(var i = 8;i<31;i++){
                 problemRatingMap.set(i*100,0);
@@ -77,8 +73,6 @@ function CodeforcesProblemsList() {
                 }
             }
 
-            console.log(problemSet.size);
-            console.log(verdictSet);
 
             const problems800 = problemRatingMap.get(800) + problemRatingMap.get(900) + problemRatingMap.get(1000) + problemRatingMap.get(1100);
             const problems1200 = problemRatingMap.get(1200) + problemRatingMap.get(1300);

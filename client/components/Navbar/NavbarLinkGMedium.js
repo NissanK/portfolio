@@ -25,7 +25,7 @@ function NavbarLinkGMedium(props) {
         <li>
             <a
             href={props.nameID} ref={linkRef}
-            className="cursor-pointer bold text-lg hover-underline-animation text-lightest-slate"
+            className="cursor-pointer bold text-base lg:text-lg hover-underline-animation text-lightest-slate"
             data-aos="fade-down" data-aos-once='true' data-aos-duration='500' data-aos-delay={props.aosdelay}
             >
             {props.name}

@@ -54,7 +54,7 @@ export default function Navbar() {
       
       {/* for medium above screen devices  */}
       {isNavbarOpen ? <ul
-        className="md:flex items-center h-full px-8 md:space-x-8 lg:space-x-12
+        className="md:flex items-center h-full px-8 md:space-x-6 lg:space-x-10
         bg-navbar-blue hidden z-0 pt-0"
         >
         
