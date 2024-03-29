@@ -68,10 +68,6 @@ function ExperienceIndex() {
                     {ExperienceList[currentRole].timeline.start} - {ExperienceList[currentRole].timeline.end}
                 </div>
                 
-                <div>
-
-                </div>
-
                 {
                     ExperienceList[currentRole].keypoints.map((point,index) => (
                         <div key={index} className='flex'> 

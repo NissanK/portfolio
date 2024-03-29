@@ -7,6 +7,8 @@ export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(true);
   const [mouseNavbar, setMouseNavbar] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [firstTimeOpened,setFirstTimeOpened] = useState(true);
+
   const navbarRef = useRef(null);
 
   const mouseEnterHandler = () =>{
@@ -15,11 +17,13 @@ export default function Navbar() {
     }
     setMouseNavbar(true);
   }
+  
   const mouseLeaveHandler = () =>{
     if(isNavbarOpen === true && scrollY !== 0){
       setIsNavbarOpen(false);
+      setFirstTimeOpened(false);
     }
-    setIsNavbarOpen(false);
+    setMouseNavbar(false);
   }
 
   useEffect(() => {
@@ -37,6 +41,7 @@ export default function Navbar() {
 
   useEffect(() => {
     if(mouseNavbar === false && scrollY !== 0){
+      setFirstTimeOpened(false);
       setIsNavbarOpen(false);
     }
     else if(scrollY === 0){
@@ -58,13 +63,13 @@ export default function Navbar() {
         bg-navbar-blue hidden z-0 pt-0"
         >
         
-        <NavbarLinkGMedium nameID="#home" name='Home' aosdelay = '0'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#about" name='About' aosdelay = '100'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#experience" name='Experience' aosdelay = '200'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#skills" name='Skills' aosdelay = '300'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#achievements" name='Achievements' aosdelay = '400'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#projects" name='Projects' aosdelay = '500'></NavbarLinkGMedium>
-        <NavbarLinkGMedium nameID="#contact" name='Contact' aosdelay = '600'></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#home" name='Home' aosdelay = {firstTimeOpened ? `0` : '0'}></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#about" name='About' aosdelay = {firstTimeOpened ? `100` : '0'}></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#experience" name='Experience' aosdelay = {firstTimeOpened ? `200` : '0'}></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#skills" name='Skills' aosdelay = {firstTimeOpened ? `300` : '0'}></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#achievements" name='Achievements' aosdelay = {firstTimeOpened ? `400` : '0'}></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#projects" name='Projects' aosdelay = {firstTimeOpened ? `500` : '0'}></NavbarLinkGMedium>
+        <NavbarLinkGMedium nameID="#contact" name='Contact' aosdelay = {firstTimeOpened ? `600` : '0'}></NavbarLinkGMedium>
         
       </ul> : null}
 

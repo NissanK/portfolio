@@ -18,13 +18,14 @@ function Link() {
     if(isNavbarOpen === true && scrollY !== 0){
       setIsNavbarOpen(false);
     }
-    setIsNavbarOpen(false);
+    setMouseNavbar(false);
   }
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
+    
     handleScroll();
 
     window.addEventListener("scroll", handleScroll);

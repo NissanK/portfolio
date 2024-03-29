@@ -104,7 +104,7 @@ function ContactIndex() {
             </span>
             <input
               type="text"
-              placeholder="Nissan Kumar" name="name"
+              placeholder="John Doe" name="name"
               value={userForm.name}
               required
               onChange={handleInputs}
@@ -119,7 +119,7 @@ function ContactIndex() {
             </span>
             <input
               type="email"
-              placeholder="nissan@example.com" name="email"
+              placeholder="johndoe@example.com" name="email"
               value={userForm.email}
               required
               onChange={handleInputs}
