@@ -1,6 +1,16 @@
 const ExperienceList = 
 [
     {
+        company : "Amazon",
+        role : "Software Development Engineering Intern",
+        timeline : {start : "May 2024", end : "July 2024"},
+        keypoints : [
+            "Not yet started"
+        ],
+        link : null,
+        expId : 0
+    },
+    {
         company : "MACS-DTU",
         role : "President",
         timeline : {start : "Nov 2023", end : "Present"},
@@ -11,18 +21,8 @@ const ExperienceList =
             "Hosted successful online Capture the Flag events with 200+ participants."
         ],
         link : "https://macsdtu.vercel.app/",
-        expId : 0
-    },
-    {
-        company : "???",
-        role : "Upcoming Software Development Engineering Intern",
-        timeline : {start : "May 2024", end : "???"},
-        keypoints : [
-            "Will be working at ??? soon"
-        ],
-        link : null,
         expId : 1
-    },
+    }
 ];
 
 export default ExperienceList;

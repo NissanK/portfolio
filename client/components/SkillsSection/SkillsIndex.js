@@ -19,6 +19,7 @@ const skills = [
   { name: "Git/Github" },
   { name: "MySQL" },
   { name: "MongoDB" },
+  { name: "Firebase"},
   { name: "Docker" },
   { name: "AWS"}
 ];

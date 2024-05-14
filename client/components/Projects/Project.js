@@ -26,7 +26,7 @@ function Project({ project , aosAnim }) {
 
   for (let i = 0; i < project.tools.length; i++) {
     tools.push(
-      <span className="mx-1" key={i}>
+      <span className="mx-1 whitespace-nowrap" key={i}>
         {project.tools[i]}
       </span>
     );
@@ -55,7 +55,7 @@ function Project({ project , aosAnim }) {
             {project.description}
           </div>
 
-          <div className=" text-light-slate sm:text-lg text-xs flex">
+          <div className=" text-light-slate sm:text-lg text-xs flex flex-wrap">
             {tools}
           </div>
         </div>
@@ -109,7 +109,7 @@ function Project({ project , aosAnim }) {
           {project.description}
         </div>
 
-        <div className=" text-light-slate md:text-lg sm:text-lg text-xs flex">
+        <div className=" text-light-slate md:text-lg sm:text-lg text-xs flex justify-end flex-wrap">
           {tools}
         </div>
 
