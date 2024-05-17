@@ -5,7 +5,7 @@ const ExperienceList =
         role : "Software Development Engineering Intern",
         timeline : {start : "May 2024", end : "July 2024"},
         keypoints : [
-            "Not yet started"
+            "Attending"
         ],
         link : null,
         expId : 0
