@@ -4,6 +4,15 @@ import Project from "./Project";
 
 const projects = [
   {
+    name: "DTU CampusNav",
+    image : "/images/DTU-CampusNav.png",
+    description:
+      "DTU CampusNav is a web application that helps students navigate through the campus of Delhi Technological University. It provides a user-friendly interface to search for any location within the campus.",
+    tools: ["Next.js", "Node.js","Express.js", "MongoDB", "Firebase","Tailwind CSS","Google StaticMaps API"],
+    github: "https://github.com/NissanK",
+    link: "https://dtu-campus-nav.vercel.app/",
+  },
+  {
     name: "TEDxDTU",
     image: "/images/TedXDTU.png",
     description:
@@ -20,15 +29,6 @@ const projects = [
     tools: ["React.js", "CSS3", "DSA", "Netlify"],
     github: "https://github.com/NissanK/Rat_In_A_Maze_Visualization",
     link: "https://nissank.github.io/Rat_In_A_Maze_Visualization/",
-  },
-  {
-    name: "DTU CampusNav",
-    image : "/images/DTU-CampusNav.png",
-    description:
-      "DTU CampusNav is a web application that helps students navigate through the campus of Delhi Technological University. It provides a user-friendly interface to search for any location within the campus.",
-    tools: ["Next.js", "Node.js","Express.js", "MongoDB", "Firebase","Tailwind CSS","Google StaticMaps API"],
-    github: "https://github.com/NissanK",
-    link: "https://dtu-campus-nav.vercel.app/",
   }
 ];
 
