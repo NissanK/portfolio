@@ -11,6 +11,7 @@ const skills = [
   { name: "Express.js" },
   { name: "C++" },
   { name: "JavaScript" },
+  { name: "TypeScript" },
   { name: "Java" },
   { name: "Tailwind CSS" },
   { name: "Bootstrap 5" },

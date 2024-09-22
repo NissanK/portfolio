@@ -13,7 +13,7 @@ function Intro() {
         {/* <IntroImage></IntroImage> */}
 
         <div className="mx-10 flex justify-center flex-col" data-aos="fade-up" data-aos-once='true' data-aos-duration='500'>
-          <h1 className="text-light-slate text-2xl md:text-3xl my-1">I&apos;m a 20 year old  developer from <span className="text-[#7cfcdf]">India</span>.</h1>
+          <h1 className="text-light-slate text-2xl md:text-3xl my-1">I&apos;m a 21 year old  developer from <span className="text-[#7cfcdf]">India</span>.</h1>
 
           <h1 className="text-light-slate text-lg md:text-xl my-3">Currently pursuing my <span className="text-highlight">B.Tech</span> in <span className="text-highlight">Mathematics and Computing</span> from <span className="text-highlight"> Delhi Technological University</span></h1>
 

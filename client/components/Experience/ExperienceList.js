@@ -5,12 +5,12 @@ const ExperienceList =
         role : "Software Development Engineering Intern",
         timeline : {start : "May 2024", end : "July 2024"},
         keypoints : [
-            "Created a function to segregate failed invoices into specific Dead Letter Queues by prioritizing validation of small invoices during high traffic, preventing starvation by large invoices and improving re-drive time for failed invoices by 50%.",
-            "Designed APIs using Design Patterns to validate end-to-end triggering functions for invoices, reducing processing errors by 25% and achieving 100% code coverage through comprehensive unit tests.",
-            "Developed and executed integration tests for seamless service interaction. Utilized AWS services like SQS, SNS, Step Functions, SWF, DDB, S3, Route53, and CloudWatch throughout the internship.",
+            "Engineered a feature to segregate failed invoices into specific Dead Letter Queues by prioritizing validation of small invoices during high traffic, preventing starvation by large invoices, and improving re-drive time by 50%.",
+            "Designed APIs using design patterns to trigger asynchronous invoice validation by returning the StepFunction ID, achieving 100% code coverage through comprehensive unit tests.",
+            "Developed and executed integration tests for seamless service interaction. Leveraged AWS services like SQS, SNS, StepFunctions, SWF, S3, Route53 and CloudWatch throughout the internship.",
             "Tech Stack: Tech Stack: Java, Junit, Mockito, Git, Smithy, AWS"
         ],
-        link : null,
+        link : "https://drive.google.com/file/d/1pCSQjtkjZLAtyRk5FIB_U4Gmh2AuHqxw/view?usp=sharing",
         expId : 0
     },
     {
